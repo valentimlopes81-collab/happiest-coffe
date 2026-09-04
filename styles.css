@@ -135,7 +135,7 @@ img { max-width: 100%; display: block; }
 }
 
 .logo-img {
-  height: 28px;
+  height: 44px;
   width: auto;
   display: block;
 }
@@ -943,7 +943,7 @@ img { max-width: 100%; display: block; }
     grid-template-columns: auto 1fr auto;
   }
   .logo { grid-column: 2; }
-  .logo-img { height: 22px; }
+  .logo-img { height: 34px; }
   .nav-left, .nav-right { display: none; }
   .nav-toggle { display: flex; grid-column: 1; }
   .header-spacer { display: block; grid-column: 3; }
