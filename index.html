@@ -7,7 +7,7 @@
 <meta name="description" content="the happiest coffee. — Specialty Coffee em Parede. Café de especialidade, pastelaria e pequenos-almoços num ambiente calmo. Avaliação 4,9 com 324 críticas.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Nunito:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -155,7 +155,7 @@
         <img class="photo" src="assets/images/interior/sala.jpg" alt="Interior the happiest coffee.">
       </div>
       <div class="about-text">
-        <span class="eyebrow">Sobre nós</span>
+        <span class="eyebrow eyebrow-blue">Sobre nós</span>
         <h2>Um espaço para desacelerar</h2>
         <p>
           Na the happiest coffee. acreditamos que uma boa chávena de café pode transformar o dia
@@ -171,7 +171,7 @@
             <strong>4,9</strong>
             <span>Avaliação média</span>
           </div>
-          <div class="stat">
+          <div class="stat stat--blue">
             <strong>324</strong>
             <span>Críticas no Google</span>
           </div>
@@ -191,13 +191,22 @@
         <span class="eyebrow">Galeria</span>
         <h2>O espaço e os detalhes</h2>
       </div>
-      <div class="gallery-grid">
-        <div class="photo-slot photo-slot--gallery" data-label="assets/images/gallery/01.jpg"><img class="photo" src="assets/images/gallery/01.jpg" alt=""></div>
-        <div class="photo-slot photo-slot--gallery" data-label="assets/images/gallery/02.jpg"><img class="photo" src="assets/images/gallery/02.jpg" alt=""></div>
-        <div class="photo-slot photo-slot--gallery" data-label="assets/images/gallery/03.jpg"><img class="photo" src="assets/images/gallery/03.jpg" alt=""></div>
-        <div class="photo-slot photo-slot--gallery" data-label="assets/images/gallery/04.jpg"><img class="photo" src="assets/images/gallery/04.jpg" alt=""></div>
-        <div class="photo-slot photo-slot--gallery" data-label="assets/images/gallery/05.jpg"><img class="photo" src="assets/images/gallery/05.jpg" alt=""></div>
-        <div class="photo-slot photo-slot--gallery" data-label="assets/images/gallery/06.jpg"><img class="photo" src="assets/images/gallery/06.jpg" alt=""></div>
+    </div>
+    <div class="gallery-columns">
+      <div class="gallery-col gallery-col--up" id="galCol1">
+        <div class="photo-slot photo-slot--gallery photo-slot--tall" data-label="assets/images/gallery/01.jpg"><img class="photo" src="assets/images/gallery/01.jpg" alt=""></div>
+        <div class="photo-slot photo-slot--gallery photo-slot--square" data-label="assets/images/gallery/02.jpg"><img class="photo" src="assets/images/gallery/02.jpg" alt=""></div>
+        <div class="photo-slot photo-slot--gallery photo-slot--short" data-label="assets/images/gallery/03.jpg"><img class="photo" src="assets/images/gallery/03.jpg" alt=""></div>
+      </div>
+      <div class="gallery-col gallery-col--down" id="galCol2">
+        <div class="photo-slot photo-slot--gallery photo-slot--square" data-label="assets/images/gallery/04.jpg"><img class="photo" src="assets/images/gallery/04.jpg" alt=""></div>
+        <div class="photo-slot photo-slot--gallery photo-slot--tall" data-label="assets/images/gallery/05.jpg"><img class="photo" src="assets/images/gallery/05.jpg" alt=""></div>
+        <div class="photo-slot photo-slot--gallery photo-slot--square" data-label="assets/images/gallery/06.jpg"><img class="photo" src="assets/images/gallery/06.jpg" alt=""></div>
+      </div>
+      <div class="gallery-col gallery-col--up gallery-col--fast" id="galCol3">
+        <div class="photo-slot photo-slot--gallery photo-slot--short" data-label="assets/images/gallery/07.jpg"><img class="photo" src="assets/images/gallery/07.jpg" alt=""></div>
+        <div class="photo-slot photo-slot--gallery photo-slot--tall" data-label="assets/images/gallery/08.jpg"><img class="photo" src="assets/images/gallery/08.jpg" alt=""></div>
+        <div class="photo-slot photo-slot--gallery photo-slot--square" data-label="assets/images/gallery/09.jpg"><img class="photo" src="assets/images/gallery/09.jpg" alt=""></div>
       </div>
     </div>
   </section>
@@ -249,7 +258,7 @@
   <section id="visitar" class="visit">
     <div class="container visit-inner">
       <div class="visit-info">
-        <span class="eyebrow">Visita-nos</span>
+        <span class="eyebrow eyebrow-blue">Visita-nos</span>
         <h2>Onde e quando nos encontrar</h2>
         <ul class="visit-list">
           <li>
