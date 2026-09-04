@@ -3,11 +3,11 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>The Happiest Coffee | Specialty Coffee em Parede</title>
-<meta name="description" content="The Happiest Coffee - Specialty Coffee em Parede. Café de especialidade, pequenos-almoços e um ambiente calmo e acolhedor. Avaliação 4,9 com 324 críticas.">
+<title>the happiest coffee. | Specialty Coffee em Parede</title>
+<meta name="description" content="the happiest coffee. — Specialty Coffee em Parede. Café de especialidade, pastelaria e pequenos-almoços num ambiente calmo. Avaliação 4,9 com 324 críticas.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -15,12 +15,18 @@
 <header class="site-header">
   <div class="container header-inner">
     <a href="#top" class="logo">
-      <span class="logo-icon">☕</span>
-      <span>The Happiest Coffee</span>
+      <svg class="logo-mark" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+        <path d="M4 8h13a3 3 0 0 1 0 6h-1"/>
+        <path d="M4 8v7a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4V8"/>
+        <path d="M7 3.5c0 1-1 1-1 2s1 1 1 2"/>
+        <path d="M11 3.5c0 1-1 1-1 2s1 1 1 2"/>
+      </svg>
+      <span>the happiest coffee.</span>
     </a>
     <nav class="nav" id="nav">
       <a href="#sobre">Sobre</a>
       <a href="#menu">Menu</a>
+      <a href="#galeria">Galeria</a>
       <a href="#criticas">Críticas</a>
       <a href="#visitar">Visitar-nos</a>
     </nav>
@@ -37,49 +43,117 @@
   <section class="hero">
     <div class="container hero-inner">
       <div class="hero-text">
-        <span class="eyebrow">Specialty Coffee · Parede</span>
-        <h1>O teu café mais feliz começa aqui.</h1>
+        <span class="eyebrow eyebrow-light">Specialty Coffee · Parede</span>
+        <h1>Café de especialidade, feito com calma.</h1>
         <p class="hero-lead">
-          Café de especialidade, pequenos-almoços caseiros e um ambiente calmo e acolhedor
-          a dois passos do mar, em Parede.
+          Grãos selecionados, pastelaria caseira e um espaço pensado para desacelerar
+          o dia — a dois passos do mar, em Parede.
         </p>
         <div class="hero-actions">
           <a href="#visitar" class="btn btn-primary">Como chegar</a>
-          <a href="#menu" class="btn btn-ghost">Ver menu</a>
+          <a href="#menu" class="btn btn-outline-light">Ver menu</a>
         </div>
-        <div class="hero-rating">
-          <span class="stars">★★★★★</span>
-          <strong>4,9</strong>
-          <span class="muted">(324 críticas no Google)</span>
-        </div>
+        <ul class="hero-badges">
+          <li>324 críticas · 4,9</li>
+          <li>Grãos de especialidade</li>
+          <li>Levantamento rápido</li>
+        </ul>
       </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="hero-blob"></div>
-        <div class="hero-card hero-card--cup">☕</div>
-        <div class="hero-card hero-card--toast">🥑 Torrada de Abacate</div>
-        <div class="hero-card hero-card--cheese">🧀 Goat Cheese Honey</div>
+      <div class="hero-visual">
+        <div class="photo-slot photo-slot--hero" data-label="assets/images/hero/hero-main.jpg">
+          <img class="photo" src="assets/images/hero/hero-main.jpg" alt="Espaço the happiest coffee.">
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- BADGES / SERVICES -->
+  <!-- SERVICES -->
   <section class="services">
     <div class="container services-grid">
       <div class="service">
-        <span class="service-icon">🪑</span>
-        <p>Comer no local</p>
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 8h13a3 3 0 0 1 0 6h-1"/><path d="M4 8v7a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4V8"/></svg>
+        <h3>Café de especialidade</h3>
+        <p>Torra selecionada, extração precisa, chávena a chávena.</p>
       </div>
       <div class="service">
-        <span class="service-icon">🥤</span>
-        <p>Take away</p>
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3c3 2 5 5 5 8a5 5 0 0 1-10 0c0-3 2-6 5-8Z"/><path d="M9 21h6"/></svg>
+        <h3>Pastelaria da casa</h3>
+        <p>Pão de queijo, doces e bolos preparados diariamente.</p>
       </div>
       <div class="service">
-        <span class="service-icon">🛵</span>
-        <p>Entrega</p>
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16"/></svg>
+        <h3>Pequeno-almoço &amp; brunch</h3>
+        <p>Torradas, ovos e opções frescas servidas todo o dia.</p>
       </div>
       <div class="service">
-        <span class="service-icon">💶</span>
-        <p>5 – 10 € por pessoa</p>
+        <svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
+        <h3>R. Vasco da Gama, Parede</h3>
+        <p>Aberto todos os dias a partir das 09:00.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU HIGHLIGHTS -->
+  <section id="menu" class="menu-highlights">
+    <div class="container">
+      <div class="section-heading section-heading--split">
+        <div>
+          <span class="eyebrow">Menu</span>
+          <h2>Destaques da casa</h2>
+        </div>
+        <p class="muted section-heading-note">Menu completo disponível na loja.</p>
+      </div>
+      <div class="highlights-grid">
+        <figure class="photo-slot photo-slot--highlight" data-label="assets/images/menu/espresso.jpg">
+          <img class="photo" src="assets/images/menu/espresso.jpg" alt="Café espresso">
+          <figcaption>
+            <strong>Café de Especialidade</strong>
+            <span>Espresso, cappuccino, flat white e mais</span>
+          </figcaption>
+        </figure>
+        <figure class="photo-slot photo-slot--highlight" data-label="assets/images/menu/pastelaria.jpg">
+          <img class="photo" src="assets/images/menu/pastelaria.jpg" alt="Pastelaria">
+          <figcaption>
+            <strong>Pastelaria</strong>
+            <span>Pão de queijo e doces feitos na casa</span>
+          </figcaption>
+        </figure>
+        <figure class="photo-slot photo-slot--highlight" data-label="assets/images/menu/torradas.jpg">
+          <img class="photo" src="assets/images/menu/torradas.jpg" alt="Torradas e brunch">
+          <figcaption>
+            <strong>Torradas &amp; Brunch</strong>
+            <span>Goat Cheese Honey, abacate e mais</span>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="menu-list-wrap">
+        <div class="menu-list">
+          <h3>Espresso &amp; Café</h3>
+          <ul>
+            <li><span>Single Espresso</span><span class="dots"></span><span class="price">2,0 €</span></li>
+            <li><span>Double Espresso</span><span class="dots"></span><span class="price">2,2 €</span></li>
+            <li><span>Macchiato</span><span class="dots"></span><span class="price">2,7 €</span></li>
+            <li><span>Americano</span><span class="dots"></span><span class="price">2,8 €</span></li>
+            <li><span>Cortado</span><span class="dots"></span><span class="price">3,0 €</span></li>
+            <li><span>Cappuccino</span><span class="dots"></span><span class="price">3,4 €</span></li>
+            <li><span>Flat White</span><span class="dots"></span><span class="price">3,4 €</span></li>
+            <li><span>Latte</span><span class="dots"></span><span class="price">3,8 €</span></li>
+          </ul>
+          <h3>Frio &amp; Especiais</h3>
+          <ul>
+            <li><span>Iced Coffee</span><span class="dots"></span><span class="price">3,5 €</span></li>
+            <li><span>Iced Latte</span><span class="dots"></span><span class="price">4,0 €</span></li>
+            <li><span>Babyccino</span><span class="dots"></span><span class="price">1,8 €</span></li>
+            <li><span>Espresso Tonic</span><span class="dots"></span><span class="price">4,5 €</span></li>
+            <li><span>V60</span><span class="dots"></span><span class="price">5,0 / 6,5 €</span></li>
+            <li><span>Batch Brew</span><span class="dots"></span><span class="price">2,9 €</span></li>
+            <li><span>Affogato</span><span class="dots"></span><span class="price">4,5 €</span></li>
+          </ul>
+        </div>
+        <div class="photo-slot photo-slot--menu-side" data-label="assets/images/menu/preparacao.jpg">
+          <img class="photo" src="assets/images/menu/preparacao.jpg" alt="Preparação de café">
+        </div>
       </div>
     </div>
   </section>
@@ -87,70 +161,53 @@
   <!-- SOBRE -->
   <section id="sobre" class="about">
     <div class="container about-inner">
+      <div class="photo-slot photo-slot--about" data-label="assets/images/interior/sala.jpg">
+        <img class="photo" src="assets/images/interior/sala.jpg" alt="Interior the happiest coffee.">
+      </div>
       <div class="about-text">
         <span class="eyebrow">Sobre nós</span>
-        <h2>Café de especialidade feito com carinho</h2>
+        <h2>Um espaço para desacelerar</h2>
         <p>
-          Na The Happiest Coffee acreditamos que uma boa chávena de café pode transformar o dia de alguém.
-          Escolhemos grãos de especialidade cuidadosamente selecionados e combinamo-los com uma equipa
-          simpática e diversa, pronta a receber-te em várias línguas.
+          Na the happiest coffee. acreditamos que uma boa chávena de café pode transformar o dia
+          de alguém. Selecionamos grãos de especialidade e combinamo-los com uma equipa
+          atenta, pronta a receber-te em várias línguas.
         </p>
         <p>
-          Ambiente calmo, acolhedor e com boa música — o lugar ideal para um pequeno-almoço com calma,
-          uma pausa a meio do dia ou aquele café que faz toda a diferença.
+          Ambiente calmo e acolhedor — o lugar certo para um pequeno-almoço com tempo,
+          uma pausa a meio do dia ou aquele café que faz a diferença.
         </p>
-        <ul class="about-highlights">
-          <li>Grãos de café de especialidade</li>
-          <li>Pequenos-almoços e brunch caseiros</li>
-          <li>Equipa acolhedora e multilingue</li>
-          <li>Um dos melhores pães de queijo de Lisboa</li>
-        </ul>
-      </div>
-      <div class="about-stats">
-        <div class="stat-card">
-          <strong>4,9</strong>
-          <span>Avaliação média</span>
-        </div>
-        <div class="stat-card">
-          <strong>324</strong>
-          <span>Críticas no Google</span>
-        </div>
-        <div class="stat-card">
-          <strong>5–10€</strong>
-          <span>Por pessoa</span>
+        <div class="about-stats">
+          <div class="stat">
+            <strong>4,9</strong>
+            <span>Avaliação média</span>
+          </div>
+          <div class="stat">
+            <strong>324</strong>
+            <span>Críticas no Google</span>
+          </div>
+          <div class="stat">
+            <strong>5–10 €</strong>
+            <span>Por pessoa</span>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- MENU -->
-  <section id="menu" class="menu">
+  <!-- GALERIA -->
+  <section id="galeria" class="gallery">
     <div class="container">
       <div class="section-heading">
-        <span class="eyebrow">Menu e destaques</span>
-        <h2>Alguns dos nossos favoritos</h2>
+        <span class="eyebrow">Galeria</span>
+        <h2>O espaço e os detalhes</h2>
       </div>
-      <div class="menu-grid">
-        <div class="menu-card">
-          <span class="menu-emoji">🧀</span>
-          <h3>Goat Cheese &amp; Honey</h3>
-          <p>Torrada com queijo de cabra e mel, um clássico da casa.</p>
-        </div>
-        <div class="menu-card">
-          <span class="menu-emoji">☕</span>
-          <h3>Cappuccino com leite de aveia</h3>
-          <p>O nosso cappuccino cremoso, também disponível com leite de aveia.</p>
-        </div>
-        <div class="menu-card">
-          <span class="menu-emoji">🥑</span>
-          <h3>Torrada de Abacate</h3>
-          <p>Fresca, saudável e cheia de sabor — perfeita para começar o dia.</p>
-        </div>
-        <div class="menu-card">
-          <span class="menu-emoji">🍞</span>
-          <h3>Pão de Queijo</h3>
-          <p>Considerado um dos top 3 melhores pães de queijo de Lisboa — feito por nós.</p>
-        </div>
+      <div class="gallery-grid">
+        <div class="photo-slot photo-slot--gallery" data-label="assets/images/gallery/01.jpg"><img class="photo" src="assets/images/gallery/01.jpg" alt=""></div>
+        <div class="photo-slot photo-slot--gallery" data-label="assets/images/gallery/02.jpg"><img class="photo" src="assets/images/gallery/02.jpg" alt=""></div>
+        <div class="photo-slot photo-slot--gallery" data-label="assets/images/gallery/03.jpg"><img class="photo" src="assets/images/gallery/03.jpg" alt=""></div>
+        <div class="photo-slot photo-slot--gallery" data-label="assets/images/gallery/04.jpg"><img class="photo" src="assets/images/gallery/04.jpg" alt=""></div>
+        <div class="photo-slot photo-slot--gallery" data-label="assets/images/gallery/05.jpg"><img class="photo" src="assets/images/gallery/05.jpg" alt=""></div>
+        <div class="photo-slot photo-slot--gallery" data-label="assets/images/gallery/06.jpg"><img class="photo" src="assets/images/gallery/06.jpg" alt=""></div>
       </div>
     </div>
   </section>
@@ -161,35 +218,31 @@
       <div class="section-heading">
         <span class="eyebrow">O que dizem de nós</span>
         <h2>Críticas de quem já nos visitou</h2>
-        <div class="reviews-score">
-          <span class="stars">★★★★★</span>
-          <strong>4,9</strong>
-          <span class="muted">· 324 críticas no Google</span>
-        </div>
+        <p class="reviews-score">4,9 de 5 · 324 críticas no Google</p>
       </div>
       <div class="reviews-grid">
         <blockquote class="review-card">
-          <p>"Ambiente calmo, acolhedor, música boa..."</p>
+          <p>Ambiente calmo, acolhedor, música boa.</p>
           <footer>Cliente do Google</footer>
         </blockquote>
         <blockquote class="review-card">
-          <p>"Um ótimo lugar para um café ou um pequeno-almoço!"</p>
+          <p>Um ótimo lugar para um café ou um pequeno-almoço.</p>
           <footer>Cliente do Google</footer>
         </blockquote>
         <blockquote class="review-card">
-          <p>"Top 3 melhores pães de queijo de Lisboa (e é feito por eles)."</p>
+          <p>Top 3 melhores pães de queijo de Lisboa — e é feito por eles.</p>
           <footer>Cliente do Google</footer>
         </blockquote>
         <blockquote class="review-card">
-          <p>"If you're looking for great coffee and awesome food this is totally it! Service in different languages with a very diverse staff."</p>
+          <p>Great coffee and awesome food. Service in different languages with a very diverse staff.</p>
           <footer>Vitória</footer>
         </blockquote>
         <blockquote class="review-card">
-          <p>"A fantastic experience! The specialty coffee is of the highest quality and the food is just as good."</p>
+          <p>A fantastic experience. The specialty coffee is of the highest quality and the food is just as good.</p>
           <footer>Elisa Moretti</footer>
         </blockquote>
         <blockquote class="review-card">
-          <p>"Love love love the vibe. I come here often, I am a regular. It's kind of like my happy place."</p>
+          <p>Love the vibe. I come here often — it's kind of like my happy place.</p>
           <footer>Daphne, In Europe</footer>
         </blockquote>
       </div>
@@ -204,28 +257,28 @@
         <h2>Onde e quando nos encontrar</h2>
         <ul class="visit-list">
           <li>
-            <span class="visit-icon">📍</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 21s7-6.5 7-11.5A7 7 0 0 0 5 9.5C5 14.5 12 21 12 21Z"/><circle cx="12" cy="9.5" r="2.3"/></svg>
             <div>
               <strong>Morada</strong>
               <p>R. Vasco da Gama 213, 2775-295 Parede</p>
             </div>
           </li>
           <li>
-            <span class="visit-icon">🕐</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
             <div>
               <strong>Horário</strong>
               <p>Todos os dias a partir das 09:00</p>
             </div>
           </li>
           <li>
-            <span class="visit-icon">💶</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/></svg>
             <div>
               <strong>Preço médio</strong>
               <p>5 – 10 € por pessoa</p>
             </div>
           </li>
           <li>
-            <span class="visit-icon">📷</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none"/></svg>
             <div>
               <strong>Instagram</strong>
               <p><a href="https://instagram.com" target="_blank" rel="noopener">@thehappiestcoffee</a></p>
@@ -238,7 +291,7 @@
       </div>
       <div class="visit-map">
         <iframe
-          title="Localização The Happiest Coffee"
+          title="Localização the happiest coffee."
           src="https://www.google.com/maps?q=R.+Vasco+da+Gama+213,+2775-295+Parede&output=embed"
           loading="lazy"
           referrerpolicy="no-referrer-when-downgrade">
@@ -251,12 +304,9 @@
 
 <footer class="site-footer">
   <div class="container footer-inner">
-    <div class="footer-brand">
-      <span class="logo-icon">☕</span>
-      <span>The Happiest Coffee</span>
-    </div>
+    <div class="footer-brand">the happiest coffee.</div>
     <p class="muted">R. Vasco da Gama 213, 2775-295 Parede · Loja de café</p>
-    <p class="muted">&copy; <span id="year"></span> The Happiest Coffee. Todos os direitos reservados.</p>
+    <p class="muted">&copy; <span id="year"></span> the happiest coffee. Todos os direitos reservados.</p>
   </div>
 </footer>
 
