@@ -14,27 +14,26 @@
 
 <header class="site-header">
   <div class="container header-inner">
-    <a href="#top" class="logo">
-      <svg class="logo-mark" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
-        <path d="M4 8h13a3 3 0 0 1 0 6h-1"/>
-        <path d="M4 8v7a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4V8"/>
-        <path d="M7 3.5c0 1-1 1-1 2s1 1 1 2"/>
-        <path d="M11 3.5c0 1-1 1-1 2s1 1 1 2"/>
-      </svg>
-      <span>the happiest coffee.</span>
-    </a>
-    <nav class="nav" id="nav">
-      <a href="#sobre">Sobre</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="nav nav-left">
       <a href="#menu">Menu</a>
       <a href="#galeria">Galeria</a>
+    </nav>
+    <a href="#top" class="logo">the happiest coffee.</a>
+    <nav class="nav nav-right">
       <a href="#criticas">Críticas</a>
       <a href="#visitar">Visitar-nos</a>
     </nav>
-    <a href="#visitar" class="btn btn-primary nav-cta">Como chegar</a>
-    <button class="nav-toggle" id="navToggle" aria-label="Abrir menu">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="header-spacer" aria-hidden="true"></div>
   </div>
+  <nav class="nav-mobile" id="navMobile">
+    <a href="#menu">Menu</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#criticas">Críticas</a>
+    <a href="#visitar">Visitar-nos</a>
+  </nav>
 </header>
 
 <main id="top">
@@ -103,30 +102,21 @@
         </div>
         <p class="muted section-heading-note">Menu completo disponível na loja.</p>
       </div>
-      <div class="highlights-grid">
-        <figure class="photo-slot photo-slot--highlight" data-label="assets/images/menu/espresso.jpg">
-          <img class="photo" src="assets/images/menu/espresso.jpg" alt="Café espresso">
-          <figcaption>
-            <strong>Café de Especialidade</strong>
-            <span>Espresso, cappuccino, flat white e mais</span>
-          </figcaption>
-        </figure>
-        <figure class="photo-slot photo-slot--highlight" data-label="assets/images/menu/pastelaria.jpg">
-          <img class="photo" src="assets/images/menu/pastelaria.jpg" alt="Pastelaria">
-          <figcaption>
-            <strong>Pastelaria</strong>
-            <span>Pão de queijo e doces feitos na casa</span>
-          </figcaption>
-        </figure>
-        <figure class="photo-slot photo-slot--highlight" data-label="assets/images/menu/torradas.jpg">
-          <img class="photo" src="assets/images/menu/torradas.jpg" alt="Torradas e brunch">
-          <figcaption>
-            <strong>Torradas &amp; Brunch</strong>
-            <span>Goat Cheese Honey, abacate e mais</span>
-          </figcaption>
-        </figure>
-      </div>
+    </div>
 
+    <div class="carousel">
+      <div class="carousel-track" id="carouselTrack">
+        <figure class="photo-slot photo-slot--carousel" data-label="assets/images/carousel/01.jpg"><img class="photo" src="assets/images/carousel/01.jpg" alt="Café de especialidade"><figcaption>Café de Especialidade</figcaption></figure>
+        <figure class="photo-slot photo-slot--carousel" data-label="assets/images/carousel/02.jpg"><img class="photo" src="assets/images/carousel/02.jpg" alt="Pastelaria da casa"><figcaption>Pastelaria da Casa</figcaption></figure>
+        <figure class="photo-slot photo-slot--carousel" data-label="assets/images/carousel/03.jpg"><img class="photo" src="assets/images/carousel/03.jpg" alt="Torradas e brunch"><figcaption>Torradas &amp; Brunch</figcaption></figure>
+        <figure class="photo-slot photo-slot--carousel" data-label="assets/images/carousel/04.jpg"><img class="photo" src="assets/images/carousel/04.jpg" alt="Pão de queijo"><figcaption>Pão de Queijo</figcaption></figure>
+        <figure class="photo-slot photo-slot--carousel" data-label="assets/images/carousel/05.jpg"><img class="photo" src="assets/images/carousel/05.jpg" alt="Cappuccino"><figcaption>Cappuccino</figcaption></figure>
+        <figure class="photo-slot photo-slot--carousel" data-label="assets/images/carousel/06.jpg"><img class="photo" src="assets/images/carousel/06.jpg" alt="Torrada de abacate"><figcaption>Torrada de Abacate</figcaption></figure>
+        <figure class="photo-slot photo-slot--carousel" data-label="assets/images/carousel/07.jpg"><img class="photo" src="assets/images/carousel/07.jpg" alt="Ambiente da loja"><figcaption>O Nosso Espaço</figcaption></figure>
+      </div>
+    </div>
+
+    <div class="container">
       <div class="menu-list-wrap">
         <div class="menu-list">
           <h3>Espresso &amp; Café</h3>
@@ -218,30 +208,36 @@
       <div class="section-heading">
         <span class="eyebrow">O que dizem de nós</span>
         <h2>Críticas de quem já nos visitou</h2>
-        <p class="reviews-score">4,9 de 5 · 324 críticas no Google</p>
+        <p class="reviews-score"><span class="stars stars--lg">★★★★★</span> 4,9 de 5 · 324 críticas no Google</p>
       </div>
       <div class="reviews-grid">
         <blockquote class="review-card">
+          <div class="stars">★★★★★</div>
           <p>Ambiente calmo, acolhedor, música boa.</p>
           <footer>Cliente do Google</footer>
         </blockquote>
         <blockquote class="review-card">
+          <div class="stars">★★★★★</div>
           <p>Um ótimo lugar para um café ou um pequeno-almoço.</p>
           <footer>Cliente do Google</footer>
         </blockquote>
         <blockquote class="review-card">
+          <div class="stars">★★★★★</div>
           <p>Top 3 melhores pães de queijo de Lisboa — e é feito por eles.</p>
           <footer>Cliente do Google</footer>
         </blockquote>
         <blockquote class="review-card">
+          <div class="stars">★★★★★</div>
           <p>Great coffee and awesome food. Service in different languages with a very diverse staff.</p>
           <footer>Vitória</footer>
         </blockquote>
         <blockquote class="review-card">
+          <div class="stars">★★★★★</div>
           <p>A fantastic experience. The specialty coffee is of the highest quality and the food is just as good.</p>
           <footer>Elisa Moretti</footer>
         </blockquote>
         <blockquote class="review-card">
+          <div class="stars">★★★★★</div>
           <p>Love the vibe. I come here often — it's kind of like my happy place.</p>
           <footer>Daphne, In Europe</footer>
         </blockquote>
