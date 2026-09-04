@@ -631,6 +631,18 @@ img { max-width: 100%; display: block; }
   color: var(--paper);
 }
 
+.info-card-photos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.photo-slot--info {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-md);
+}
+
 .feature-list {
   list-style: none;
   margin: 14px 0 0;
@@ -857,6 +869,19 @@ img { max-width: 100%; display: block; }
   background: var(--blue);
   border-color: var(--blue);
   color: var(--paper);
+}
+
+.social-link--footer {
+  justify-self: center;
+  margin: 4px 0 2px;
+  border-color: rgba(237, 231, 217, 0.35);
+  color: var(--text-light);
+}
+
+.social-link--footer:hover {
+  background: var(--blue-soft);
+  border-color: var(--blue-soft);
+  color: var(--green-deep);
 }
 
 .visit-map {
