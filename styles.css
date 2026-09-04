@@ -129,15 +129,18 @@ img { max-width: 100%; display: block; }
 .logo {
   grid-column: 3;
   justify-self: center;
-  font-family: 'Bree Serif', serif;
-  font-weight: 400;
-  font-size: 1.5rem;
-  color: var(--text-light);
-  white-space: nowrap;
-  transition: color 0.25s ease, transform 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  transition: transform 0.25s ease, filter 0.25s ease;
 }
 
-.logo:hover { color: var(--blue-soft); transform: scale(1.02); }
+.logo-img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+.logo:hover { transform: scale(1.04); filter: brightness(1.15); }
 
 .nav {
   display: flex;
@@ -911,11 +914,10 @@ img { max-width: 100%; display: block; }
   gap: 8px;
 }
 
-.footer-brand {
-  font-family: 'Bree Serif', serif;
-  font-size: 1.15rem;
-  font-weight: 400;
-  margin-bottom: 6px;
+.footer-logo {
+  height: 54px;
+  width: auto;
+  margin: 0 auto 6px;
 }
 
 .site-footer .muted { color: rgba(237, 231, 217, 0.62); font-size: 0.85rem; }
@@ -940,7 +942,8 @@ img { max-width: 100%; display: block; }
   .header-inner {
     grid-template-columns: auto 1fr auto;
   }
-  .logo { grid-column: 2; font-size: 1.2rem; }
+  .logo { grid-column: 2; }
+  .logo-img { height: 22px; }
   .nav-left, .nav-right { display: none; }
   .nav-toggle { display: flex; grid-column: 1; }
   .header-spacer { display: block; grid-column: 3; }
