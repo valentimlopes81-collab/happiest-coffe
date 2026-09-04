@@ -29,6 +29,17 @@ if (carouselTrack) {
   });
 }
 
+// Infinite gallery columns: same duplication trick, but vertical
+// (translateY -50%), so each tetris column loops seamlessly too.
+document.querySelectorAll('.gallery-col').forEach((col) => {
+  const items = Array.from(col.children);
+  items.forEach((item) => {
+    const clone = item.cloneNode(true);
+    clone.setAttribute('aria-hidden', 'true');
+    col.appendChild(clone);
+  });
+});
+
 // Photo placeholders: show a labeled placeholder until a real image
 // is added at the referenced path in assets/images/**.
 document.querySelectorAll('.photo-slot .photo').forEach((img) => {
