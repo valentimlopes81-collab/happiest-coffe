@@ -1,7 +1,7 @@
 :root {
-  --green-deep: #3E4632;
-  --green-mid: #4E5940;
-  --green-light: #5D6C4C;
+  --green-deep: #6AA1C3;
+  --green-mid: #6AA1C3;
+  --green-light: #6AA1C3;
   --tan: #B98450;
   --tan-soft: #E7D3B7;
   --blue: #4E7C9B;
@@ -1053,4 +1053,101 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 560px) {
   .product-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   Clube Happiest / Subscrições (pricing cards)
+   ============================================================ */
+.clube {
+  padding: 24px 0 96px;
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+  align-items: stretch;
+}
+
+.plan-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 34px 28px 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+}
+
+.plan-card h3 {
+  font-size: 1.3rem;
+  margin: 0 0 10px;
+}
+
+.plan-desc {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0 0 24px;
+  flex: 1;
+}
+
+.plan-card .btn { width: 100%; }
+
+/* Dark-outline button for secondary plans (light background) */
+.btn-outline-dark {
+  background: transparent;
+  color: var(--text);
+  border-color: #6AA1C3;
+}
+
+.btn-outline-dark:hover {
+  background: #6AA1C3;
+  color: var(--paper);
+  transform: translateY(-2px) scale(1.03);
+}
+
+/* Featured plan: brand-blue surface so it stands out */
+.plan-card--featured {
+  background: #6AA1C3;
+  border: 2px solid #6AA1C3;
+  color: var(--paper);
+  box-shadow: var(--shadow);
+}
+
+.plan-card--featured h3 { color: var(--paper); }
+.plan-card--featured .plan-desc { color: rgba(255, 255, 255, 0.9); }
+
+.plan-badge {
+  position: absolute;
+  top: -13px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--tan);
+  color: var(--paper);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 6px 16px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.plan-card--featured .btn-primary {
+  background: var(--paper);
+  color: #3d6d8a;
+}
+
+.plan-card--featured .btn-primary:hover {
+  background: var(--cream);
+}
+
+@media (max-width: 860px) {
+  .plan-grid { grid-template-columns: 1fr; max-width: 420px; margin: 0 auto; }
 }
