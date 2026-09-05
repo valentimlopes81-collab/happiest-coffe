@@ -80,3 +80,41 @@ document.querySelectorAll('.photo-slot .photo').forEach((img) => {
   img.addEventListener('error', markEmpty);
   if (img.complete && img.naturalWidth === 0) markEmpty();
 });
+
+// Hero carousel: fade between slides with arrows, dots and autoplay.
+const heroCarousel = document.getElementById('heroCarousel');
+if (heroCarousel) {
+  const slides = Array.from(heroCarousel.querySelectorAll('.hero-slide'));
+  const dots = Array.from(heroCarousel.querySelectorAll('.hero-dot'));
+  const prevBtn = document.getElementById('heroPrev');
+  const nextBtn = document.getElementById('heroNext');
+  let index = 0;
+  let timer = null;
+  const INTERVAL = 6000;
+
+  const show = (next) => {
+    index = (next + slides.length) % slides.length;
+    slides.forEach((s, i) => s.classList.toggle('is-active', i === index));
+    dots.forEach((d, i) => {
+      const active = i === index;
+      d.classList.toggle('is-active', active);
+      d.setAttribute('aria-selected', String(active));
+    });
+  };
+
+  const start = () => {
+    stop();
+    timer = window.setInterval(() => show(index + 1), INTERVAL);
+  };
+  const stop = () => { if (timer) window.clearInterval(timer); timer = null; };
+
+  nextBtn.addEventListener('click', () => { show(index + 1); start(); });
+  prevBtn.addEventListener('click', () => { show(index - 1); start(); });
+  dots.forEach((dot, i) => dot.addEventListener('click', () => { show(i); start(); }));
+
+  heroCarousel.addEventListener('mouseenter', stop);
+  heroCarousel.addEventListener('mouseleave', start);
+
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (!reduce) start();
+}

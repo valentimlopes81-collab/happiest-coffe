@@ -47,26 +47,65 @@
 
 <main id="top">
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-inner">
-      <div class="hero-text">
-        <span class="eyebrow eyebrow-light">Specialty Coffee · Parede</span>
-        <h1>Café de especialidade, feito com calma.</h1>
-        <p class="hero-lead">
-          Grãos selecionados, pastelaria caseira e um espaço pensado para desacelerar
-          o dia — a dois passos do mar, em Parede.
-        </p>
-        <div class="hero-actions">
-          <a href="#visitar" class="btn btn-primary">Como chegar</a>
-          <a href="assets/images/menu-happiest-coffee.png" target="_blank" rel="noopener" class="btn btn-outline-light">Ver menu</a>
+  <!-- HERO CARROSSEL -->
+  <section class="hero-carousel" id="heroCarousel" aria-roledescription="carrossel" aria-label="Áreas de negócio">
+    <div class="hero-slides">
+
+      <!-- Slide 1: THE CLUB -->
+      <article class="hero-slide is-active" role="group" aria-roledescription="slide" aria-label="1 de 3">
+        <img class="hero-slide-img" src="assets/images/happiestcoffee1.jpg" alt="Café de especialidade the happiest coffee.">
+        <div class="hero-slide-content">
+          <div class="container">
+            <span class="eyebrow eyebrow-light">THE CLUB</span>
+            <h1>O teu café de especialidade, todos os meses.</h1>
+            <div class="hero-actions">
+              <a href="loja.html#clube" class="btn btn-primary">Aderir ao Clube</a>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="hero-visual">
-        <div class="photo-slot photo-slot--hero" data-label="assets/images/banner-principal.png">
-          <img class="photo" src="assets/images/banner-principal.png" alt="Espaço the happiest coffee.">
+      </article>
+
+      <!-- Slide 2: LOJA ONLINE -->
+      <article class="hero-slide" role="group" aria-roledescription="slide" aria-label="2 de 3">
+        <img class="hero-slide-img" src="assets/images/preparacao1.png" alt="Preparação de café the happiest coffee.">
+        <div class="hero-slide-content">
+          <div class="container">
+            <span class="eyebrow eyebrow-light">Loja Online</span>
+            <h1>Leva a experiência The Happiest Coffee para casa.</h1>
+            <div class="hero-actions">
+              <a href="loja.html" class="btn btn-primary">Comprar Agora</a>
+            </div>
+          </div>
         </div>
-      </div>
+      </article>
+
+      <!-- Slide 3: O NOSSO ESPAÇO -->
+      <article class="hero-slide" role="group" aria-roledescription="slide" aria-label="3 de 3">
+        <img class="hero-slide-img" src="assets/images/sala.png" alt="Interior the happiest coffee.">
+        <div class="hero-slide-content">
+          <div class="container">
+            <span class="eyebrow eyebrow-light">O Nosso Espaço</span>
+            <h1>Um espaço para desacelerar e aproveitar o momento.</h1>
+            <div class="hero-actions">
+              <a href="#galeria" class="btn btn-primary">Ver Galeria</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <button class="hero-arrow hero-arrow--prev" id="heroPrev" type="button" aria-label="Slide anterior">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>
+    </button>
+    <button class="hero-arrow hero-arrow--next" id="heroNext" type="button" aria-label="Slide seguinte">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </button>
+
+    <div class="hero-dots" id="heroDots" role="tablist" aria-label="Escolher slide">
+      <button class="hero-dot is-active" type="button" role="tab" aria-label="Ir para o slide 1" aria-selected="true"></button>
+      <button class="hero-dot" type="button" role="tab" aria-label="Ir para o slide 2" aria-selected="false"></button>
+      <button class="hero-dot" type="button" role="tab" aria-label="Ir para o slide 3" aria-selected="false"></button>
     </div>
   </section>
 
