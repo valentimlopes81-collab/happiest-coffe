@@ -1351,3 +1351,105 @@ img { max-width: 100%; display: block; }
 }
 
 .contact-list a:hover { color: #6AA1C3; }
+
+/* ============================================================
+   The Club — premium landing page
+   ============================================================ */
+.club-main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Hero banner */
+.club-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: clamp(88px, 18vh, 150px) 0;
+  text-align: center;
+}
+
+.club-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.club-hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.club-hero-content .eyebrow {
+  color: var(--tan-soft);
+  margin-bottom: 16px;
+}
+
+.club-hero-content h1 {
+  color: #fff;
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  margin-bottom: 14px;
+}
+
+.club-hero-content p {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  max-width: 560px;
+  margin: 0 0 30px;
+}
+
+.club-hero-content .btn-primary {
+  background: #6AA1C3;
+  color: var(--paper);
+}
+
+.club-hero-content .btn-primary:hover { background: #5b91b3; }
+
+/* Benefits */
+.benefits {
+  background: var(--cream);
+  padding: 72px 0;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.benefit {
+  text-align: center;
+  padding: 0 8px;
+}
+
+.benefit-icon {
+  font-size: 2.2rem;
+  line-height: 1;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.benefit h3 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+}
+
+.benefit p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin: 0;
+  max-width: 320px;
+  margin-inline: auto;
+}
+
+/* Let the pricing section grow to push the footer down */
+.club-main .clube--page { flex: 1; background: var(--paper); }
+
+@media (max-width: 860px) {
+  .benefits-grid { grid-template-columns: 1fr; gap: 30px; }
+}
