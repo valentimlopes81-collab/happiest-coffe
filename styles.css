@@ -110,13 +110,19 @@ img { max-width: 100%; display: block; }
 
 .btn:active { transform: translateY(0) scale(0.98); }
 
-/* Header */
+/* Header — glassmorphism */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 50;
-  background: var(--green-light);
+  background: rgba(246, 241, 231, 0.85); /* --cream at 85% */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(43, 38, 32, 0.08);
 }
+
+/* Darken the white wordmark so it reads on the light glass header */
+.site-header .logo-img { filter: brightness(0) saturate(100%); opacity: 0.88; }
 
 .header-inner {
   display: grid;
@@ -140,7 +146,8 @@ img { max-width: 100%; display: block; }
   display: block;
 }
 
-.logo:hover { transform: scale(1.04); filter: brightness(1.15); }
+.logo:hover { transform: scale(1.04); }
+.logo:hover .logo-img { opacity: 1; }
 
 .nav {
   display: flex;
@@ -152,12 +159,12 @@ img { max-width: 100%; display: block; }
 
 .nav a {
   position: relative;
-  font-weight: 400;
-  color: var(--text-light);
-  opacity: 0.85;
+  font-weight: 500;
+  color: var(--text);
+  opacity: 0.78;
   font-size: 0.9rem;
   padding-bottom: 3px;
-  transition: opacity 0.2s ease;
+  transition: opacity 0.2s ease, color 0.2s ease;
 }
 
 .nav a::after {
@@ -173,8 +180,9 @@ img { max-width: 100%; display: block; }
   transition: transform 0.3s ease;
 }
 
-.nav a:hover { opacity: 1; }
+.nav a:hover { opacity: 1; color: #6AA1C3; }
 .nav a:hover::after { transform: scaleX(1); transform-origin: left; }
+.nav a[aria-current="page"] { opacity: 1; color: #6AA1C3; }
 
 .header-spacer { grid-column: 5; width: 20px; display: none; }
 
@@ -194,7 +202,7 @@ img { max-width: 100%; display: block; }
 .nav-toggle span {
   width: 20px;
   height: 1.5px;
-  background: var(--text-light);
+  background: var(--text);
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
@@ -205,7 +213,9 @@ img { max-width: 100%; display: block; }
 .nav-mobile {
   display: none;
   flex-direction: column;
-  background: var(--green-light);
+  background: rgba(246, 241, 231, 0.92);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   padding: 0 28px;
   gap: 18px;
   max-height: 0;
@@ -214,7 +224,7 @@ img { max-width: 100%; display: block; }
 }
 
 .nav-mobile a {
-  color: var(--text-light);
+  color: var(--text);
   font-size: 0.95rem;
   opacity: 0.9;
 }
@@ -1452,4 +1462,31 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 860px) {
   .benefits-grid { grid-template-columns: 1fr; gap: 30px; }
+}
+
+/* ============================================================
+   Micro-interactions — text selection & scrollbar
+   ============================================================ */
+::selection {
+  background-color: #6AA1C3;
+  color: #FFFFFF;
+}
+::-moz-selection {
+  background-color: #6AA1C3;
+  color: #FFFFFF;
+}
+
+/* Slim custom scrollbar (WebKit/Blink) */
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: var(--cream); }
+::-webkit-scrollbar-thumb {
+  background: #6AA1C3;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover { background: #5b91b3; }
+
+/* Firefox */
+html {
+  scrollbar-width: thin;
+  scrollbar-color: #6AA1C3 var(--cream);
 }
