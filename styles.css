@@ -1059,6 +1059,69 @@ img { max-width: 100%; display: block; }
 
 .site-footer .muted { color: rgba(237, 231, 217, 0.62); font-size: 0.85rem; }
 
+/* Footer — legal information */
+.footer-legal {
+  margin: 18px auto 6px;
+  padding-top: 20px;
+  max-width: 720px;
+  border-top: 1px solid rgba(237, 231, 217, 0.18);
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+}
+
+.footer-legal-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(237, 231, 217, 0.85);
+}
+
+.footer-legal-links {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px 20px;
+}
+
+.footer-legal-links a {
+  color: rgba(237, 231, 217, 0.78);
+  font-size: 0.85rem;
+  transition: color 0.2s ease;
+}
+
+.footer-legal-links a:hover { color: var(--text-light); }
+
+/* thin separators between the links */
+.footer-legal-links li { position: relative; }
+.footer-legal-links li + li::before {
+  content: "";
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 12px;
+  background: rgba(237, 231, 217, 0.25);
+}
+
+.footer-legal-note {
+  margin: 4px 0 0;
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: rgba(237, 231, 217, 0.5);
+  max-width: 640px;
+}
+
+@media (max-width: 560px) {
+  .footer-legal-links li + li::before { display: none; }
+}
+
 /* Responsive */
 @media (max-width: 960px) {
   .hero-inner, .about-inner, .visit-inner {
@@ -1489,4 +1552,34 @@ img { max-width: 100%; display: block; }
 html {
   scrollbar-width: thin;
   scrollbar-color: #6AA1C3 var(--cream);
+}
+
+/* ============================================================
+   Legal placeholder pages
+   ============================================================ */
+.legal-main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.legal-page {
+  flex: 1;
+  padding: 80px 0 96px;
+}
+
+.legal-prose {
+  max-width: 720px;
+}
+
+.legal-prose h1 {
+  font-size: clamp(1.9rem, 3.6vw, 2.7rem);
+  margin-bottom: 20px;
+}
+
+.legal-prose p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin: 0;
 }
