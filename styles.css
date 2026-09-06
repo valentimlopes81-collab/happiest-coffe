@@ -2,8 +2,8 @@
   --green-deep: #6AA1C3;
   --green-mid: #6AA1C3;
   --green-light: #6AA1C3;
-  --tan: #B98450;
-  --tan-soft: #E7D3B7;
+  --tan: #6AA1C3;
+  --tan-soft: #AECBDB;
   --blue: #4E7C9B;
   --blue-deep: #3A6076;
   --blue-soft: #AECBDB;
@@ -63,7 +63,7 @@ img { max-width: 100%; display: block; }
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--tan);
+  color: var(--blue-deep);
   margin-bottom: 14px;
 }
 
@@ -578,7 +578,7 @@ img { max-width: 100%; display: block; }
 
 .menu-list h3 {
   font-size: 1.05rem;
-  color: var(--tan);
+  color: var(--blue-deep);
   margin-bottom: 18px;
 }
 
@@ -742,7 +742,7 @@ img { max-width: 100%; display: block; }
 .hours-list li:last-child { border-bottom: none; }
 
 .hours-list li.is-today {
-  color: var(--tan);
+  color: var(--blue-deep);
   font-weight: 700;
 }
 
@@ -863,7 +863,7 @@ img { max-width: 100%; display: block; }
 .reviews { padding: 80px 0; background: var(--paper); }
 
 .stars {
-  color: var(--tan);
+  color: var(--blue-deep);
   letter-spacing: 2px;
   font-size: 0.85rem;
 }
@@ -916,7 +916,7 @@ img { max-width: 100%; display: block; }
   font-weight: 500;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--tan);
+  color: var(--blue-deep);
 }
 
 /* Visit */
@@ -970,7 +970,7 @@ img { max-width: 100%; display: block; }
 }
 
 .visit-list a:not(.social-link) {
-  color: var(--tan);
+  color: var(--blue-deep);
   font-weight: 500;
   position: relative;
   transition: color 0.25s ease;
@@ -1328,7 +1328,7 @@ img { max-width: 100%; display: block; }
   top: -13px;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--tan);
+  background: var(--blue-deep);
   color: var(--paper);
   font-size: 0.68rem;
   font-weight: 700;
