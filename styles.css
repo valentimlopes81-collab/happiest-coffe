@@ -1300,3 +1300,54 @@ img { max-width: 100%; display: block; }
     );
   }
 }
+
+/* THE CLUB — dedicated page spacing */
+.clube--page { padding: 72px 0 100px; }
+
+/* Sobre Nós — A Nossa História */
+.about-page { padding: 72px 0 8px; }
+
+.about-prose {
+  max-width: 760px;
+  text-align: center;
+}
+
+.about-prose h1 {
+  font-size: clamp(2rem, 4vw, 2.9rem);
+  margin-bottom: 22px;
+}
+
+.about-prose p {
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: var(--text);
+  margin: 0;
+}
+
+.about-info { padding-top: 40px; }
+
+.about-maps-btn { margin-top: 18px; align-self: flex-start; }
+
+.contact-list {
+  list-style: none;
+  margin: 4px 0 14px;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.contact-list li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.95rem;
+}
+
+.contact-list svg {
+  width: 20px;
+  height: 20px;
+  color: #6AA1C3;
+  flex-shrink: 0;
+}
+
+.contact-list a:hover { color: #6AA1C3; }
