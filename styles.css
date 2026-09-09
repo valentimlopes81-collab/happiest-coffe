@@ -244,7 +244,9 @@ img { max-width: 100%; display: block; }
 
 .hero-slides {
   position: relative;
-  height: clamp(360px, 62vw, 640px);
+  width: 100%;
+  /* Same ratio as the banner photos (2752x1536) so nothing is ever cropped */
+  aspect-ratio: 2752 / 1536;
 }
 
 .hero-slide {
@@ -252,7 +254,7 @@ img { max-width: 100%; display: block; }
   inset: 0;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 1s ease, visibility 1s ease;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
 }
 
 .hero-slide.is-active {
@@ -273,49 +275,52 @@ img { max-width: 100%; display: block; }
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.1);
-  filter: blur(3px);
-  transform-origin: 50% 50%;
-  transition: transform 1.1s cubic-bezier(0.22, 0.8, 0.32, 1), filter 1.1s ease;
+  display: block;
+}
+
+/* Each product is its own isolated crop of the same photo (pixel-aligned
+   at rest), so it can lift on hover and fly in on slide-change completely
+   independently of the others — no full-image transform, no shake. */
+.hero-hotspot {
+  position: absolute;
+  overflow: hidden;
+  border-radius: 14px;
+  cursor: pointer;
+  background-image: var(--bg);
+  background-repeat: no-repeat;
+  background-position: var(--px) var(--py);
+  background-size: var(--sx) var(--sy);
+  box-shadow: 0 0 0 rgba(43, 38, 32, 0);
+  transform: translate(var(--ex), var(--ey)) scale(0.85) rotate(var(--er));
+  opacity: 0;
+  transition:
+    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1) var(--ed),
+    opacity 0.6s ease var(--ed),
+    box-shadow 0.35s ease;
   will-change: transform;
 }
 
-.hero-slide.is-active .hero-slide-img {
-  transform: scale(1);
-  filter: blur(0);
+.hero-slide.is-active .hero-hotspot {
+  opacity: 1;
+  transform: translate(0, 0) scale(1) rotate(0deg);
 }
 
-/* Hover hotspots: hovering a product zooms the whole photo toward it */
-.hero-hotspot {
-  position: absolute;
-  left: var(--hx);
-  top: var(--hy);
-  width: var(--hw);
-  height: var(--hh);
+.hero-slide:not(.is-active) .hero-hotspot {
+  transition: transform 0.4s ease, opacity 0.35s ease;
+}
+
+.hero-slide.is-active .hero-hotspot:hover {
+  transform: translateY(-10px) scale(1) rotate(0deg);
+  box-shadow: 0 20px 26px -14px rgba(43, 38, 32, 0.45);
   z-index: 2;
-  border-radius: 18px;
-  cursor: pointer;
-}
-
-.hero-hotspot::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: inherit;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.22), transparent 72%);
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.hero-hotspot:hover::after { opacity: 1; }
-
-.hero-slide-media.is-hover-zoom .hero-slide-img {
-  transform: scale(1.07);
-  transition: transform 0.9s cubic-bezier(0.22, 0.8, 0.32, 1);
 }
 
 @media (hover: none) {
-  .hero-hotspot { display: none; }
+  .hero-slide.is-active .hero-hotspot:hover { transform: none; box-shadow: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-hotspot { transition: opacity 0.3s ease !important; transform: none !important; }
 }
 
 /* Bottom fade so the carousel blends into the page background */
@@ -324,14 +329,14 @@ img { max-width: 100%; display: block; }
   left: 0;
   right: 0;
   bottom: 0;
-  height: 18%;
-  min-height: 60px;
+  height: 14%;
+  min-height: 50px;
   background: linear-gradient(to bottom, transparent, var(--cream));
   pointer-events: none;
   z-index: 1;
 }
 
-/* Arrows: minimalist triangular silhouettes */
+/* Arrows: minimalist outline chevrons — a roofline, not a filled triangle */
 .hero-arrow {
   position: absolute;
   top: 50%;
@@ -353,13 +358,14 @@ img { max-width: 100%; display: block; }
 .hero-arrow-tri {
   display: block;
   width: 16px;
-  height: 26px;
-  background: currentColor;
-  filter: drop-shadow(0 2px 6px rgba(43, 38, 32, 0.35));
+  height: 16px;
+  border-top: 3px solid currentColor;
+  border-right: 3px solid currentColor;
+  filter: drop-shadow(0 2px 4px rgba(43, 38, 32, 0.35));
 }
 
-.hero-arrow-tri--prev { clip-path: polygon(100% 0, 0 50%, 100% 100%); }
-.hero-arrow-tri--next { clip-path: polygon(0 0, 100% 50%, 0 100%); }
+.hero-arrow-tri--prev { transform: rotate(-135deg); }
+.hero-arrow-tri--next { transform: rotate(45deg); }
 
 .hero-arrow:hover { opacity: 1; transform: translateY(-50%) scale(1.12); }
 .hero-arrow--prev { left: 18px; }
@@ -1381,9 +1387,8 @@ img { max-width: 100%; display: block; }
 
 /* Hero carousel — mobile */
 @media (max-width: 640px) {
-  .hero-slides { height: clamp(280px, 100vw, 420px); }
   .hero-arrow { width: 34px; height: 52px; }
-  .hero-arrow-tri { width: 12px; height: 20px; }
+  .hero-arrow-tri { width: 11px; height: 11px; border-width: 2.5px; }
   .hero-arrow--prev { left: 6px; }
   .hero-arrow--next { right: 6px; }
 }

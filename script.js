@@ -118,21 +118,4 @@ if (heroCarousel) {
 
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!reduce) start();
-
-  // Hotspot hover: zoom the photo toward the product under the cursor.
-  heroCarousel.querySelectorAll('.hero-hotspot').forEach((spot) => {
-    const media = spot.closest('.hero-slide-media');
-    const img = media && media.querySelector('.hero-slide-img');
-    if (!img) return;
-    const style = getComputedStyle(spot);
-    const originX = style.getPropertyValue('--hcx').trim() || '50%';
-    const originY = style.getPropertyValue('--hcy').trim() || '50%';
-    spot.addEventListener('mouseenter', () => {
-      img.style.transformOrigin = `${originX} ${originY}`;
-      media.classList.add('is-hover-zoom');
-    });
-    spot.addEventListener('mouseleave', () => {
-      media.classList.remove('is-hover-zoom');
-    });
-  });
 }
