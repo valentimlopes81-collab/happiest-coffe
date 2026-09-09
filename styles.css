@@ -276,51 +276,47 @@ img { max-width: 100%; display: block; }
   height: 100%;
   object-fit: cover;
   display: block;
+  transform: scale(1);
+  transform-origin: 50% 50%;
+  transition: transform 0.45s ease;
 }
 
-/* Each product is its own isolated crop of the same photo (pixel-aligned
-   at rest), so it can lift on hover and fly in on slide-change completely
-   independently of the others — no full-image transform, no shake. */
+/* Hovering any product gives the whole photo a soft, uniform upscale —
+   always anchored to the centre, so it's smooth and never shakes. */
+.hero-slide-media:has(.hero-hotspot:hover) .hero-slide-img {
+  transform: scale(1.035);
+}
+
+/* Each hotspot is an invisible hover target sized to one product; it only
+   draws a soft glow around that product, it never duplicates the image. */
 .hero-hotspot {
   position: absolute;
-  overflow: hidden;
-  border-radius: 14px;
   cursor: pointer;
-  background-image: var(--bg);
-  background-repeat: no-repeat;
-  background-position: var(--px) var(--py);
-  background-size: var(--sx) var(--sy);
-  box-shadow: 0 0 0 rgba(43, 38, 32, 0);
-  transform: translate(var(--ex), var(--ey)) scale(0.85) rotate(var(--er));
-  opacity: 0;
-  transition:
-    transform 0.85s cubic-bezier(0.16, 1, 0.3, 1) var(--ed),
-    opacity 0.6s ease var(--ed),
-    box-shadow 0.35s ease;
-  will-change: transform;
-}
-
-.hero-slide.is-active .hero-hotspot {
-  opacity: 1;
-  transform: translate(0, 0) scale(1) rotate(0deg);
-}
-
-.hero-slide:not(.is-active) .hero-hotspot {
-  transition: transform 0.4s ease, opacity 0.35s ease;
-}
-
-.hero-slide.is-active .hero-hotspot:hover {
-  transform: translateY(-10px) scale(1) rotate(0deg);
-  box-shadow: 0 20px 26px -14px rgba(43, 38, 32, 0.45);
   z-index: 2;
 }
 
+.hero-hotspot::after {
+  content: "";
+  position: absolute;
+  inset: -12%;
+  border-radius: 28px;
+  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0) 75%);
+  box-shadow: 0 0 46px 6px rgba(255, 255, 255, 0.35);
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+
+.hero-hotspot:hover::after { opacity: 1; }
+
 @media (hover: none) {
-  .hero-slide.is-active .hero-hotspot:hover { transform: none; box-shadow: none; }
+  .hero-hotspot::after { display: none; }
+  .hero-slide-media:has(.hero-hotspot:hover) .hero-slide-img { transform: scale(1); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero-hotspot { transition: opacity 0.3s ease !important; transform: none !important; }
+  .hero-slide-img { transition: none !important; }
+  .hero-slide-media:has(.hero-hotspot:hover) .hero-slide-img { transform: scale(1) !important; }
 }
 
 /* Bottom fade so the carousel blends into the page background */
