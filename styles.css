@@ -287,30 +287,15 @@ img { max-width: 100%; display: block; }
   transform: scale(1.035);
 }
 
-/* Each hotspot is an invisible hover target sized to one product; it only
-   draws a soft glow around that product, it never duplicates the image. */
+/* Each hotspot is just an invisible hover target sized to one product —
+   hovering it gives the whole photo its subtle upscale (see above). */
 .hero-hotspot {
   position: absolute;
   cursor: pointer;
   z-index: 2;
 }
 
-.hero-hotspot::after {
-  content: "";
-  position: absolute;
-  inset: -12%;
-  border-radius: 28px;
-  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0) 75%);
-  box-shadow: 0 0 46px 6px rgba(255, 255, 255, 0.35);
-  opacity: 0;
-  transition: opacity 0.35s ease;
-  pointer-events: none;
-}
-
-.hero-hotspot:hover::after { opacity: 1; }
-
 @media (hover: none) {
-  .hero-hotspot::after { display: none; }
   .hero-slide-media:has(.hero-hotspot:hover) .hero-slide-img { transform: scale(1); }
 }
 
