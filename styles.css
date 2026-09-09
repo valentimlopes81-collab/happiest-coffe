@@ -447,12 +447,6 @@ img { max-width: 100%; display: block; }
   border-radius: var(--radius-lg);
 }
 
-.photo-slot--menu-side {
-  border-radius: var(--radius-md);
-  min-height: 340px;
-  height: 100%;
-}
-
 .photo-slot--about {
   aspect-ratio: 3 / 4;
   border-radius: var(--radius-lg);
@@ -569,11 +563,39 @@ img { max-width: 100%; display: block; }
   font-weight: 400;
 }
 
-.menu-list-wrap {
-  display: grid;
-  grid-template-columns: 1.2fr 1fr;
-  gap: 56px;
-  align-items: stretch;
+.menu-card {
+  max-width: 640px;
+  margin: 0 auto;
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow);
+  padding: 48px 52px;
+}
+
+.menu-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 22px;
+  margin-bottom: 28px;
+  border-bottom: 1px solid var(--border);
+}
+
+.menu-card-logo {
+  height: 58px;
+  width: auto;
+  display: block;
+}
+
+.menu-card-eyebrow {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text);
 }
 
 .menu-list h3 {
@@ -1130,8 +1152,8 @@ img { max-width: 100%; display: block; }
   .about-inner { grid-template-columns: 1fr; }
   .about .photo-slot--about { aspect-ratio: 16 / 10; order: -1; }
   .services-grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
-  .menu-list-wrap { grid-template-columns: 1fr; }
-  .photo-slot--menu-side { min-height: 260px; order: -1; }
+  .menu-card { padding: 36px 24px; }
+  .menu-card-header { flex-wrap: wrap; }
   .reviews-grid { grid-template-columns: 1fr; }
   .gallery-columns { height: 560px; }
   .info-grid { grid-template-columns: 1fr; }
