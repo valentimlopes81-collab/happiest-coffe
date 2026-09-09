@@ -47,58 +47,45 @@
 <main id="top">
 
   <!-- HERO CARROSSEL -->
-  <section class="hero-carousel" id="heroCarousel" aria-roledescription="carrossel" aria-label="Áreas de negócio">
+  <section class="hero-carousel" id="heroCarousel" aria-roledescription="carrossel" aria-label="Produtos the happiest coffee.">
     <div class="hero-slides">
 
-      <!-- Slide 1: THE CLUB -->
+      <!-- Slide 1: SACO + CAFÉ -->
       <article class="hero-slide is-active" role="group" aria-roledescription="slide" aria-label="1 de 3">
-        <img class="hero-slide-img" src="assets/images/happiestcoffee1.jpg" alt="Café de especialidade the happiest coffee.">
-        <div class="hero-slide-content">
-          <div class="container">
-            <span class="eyebrow eyebrow-light">THE CLUB</span>
-            <h1>O teu café de especialidade, todos os meses.</h1>
-            <div class="hero-actions">
-              <a href="loja.html#clube" class="btn btn-primary">Aderir ao Clube</a>
-            </div>
-          </div>
+        <div class="hero-slide-media">
+          <img class="hero-slide-img" src="assets/images/hero/hero-bag-cafe.jpg" alt="Saco de café the happiest coffee. com dois copos de café de especialidade">
+          <span class="hero-hotspot" aria-hidden="true" style="--hx:36%;--hy:10%;--hw:30%;--hh:82%;--hcx:52%;--hcy:52%;"></span>
+          <span class="hero-hotspot" aria-hidden="true" style="--hx:17%;--hy:14%;--hw:23%;--hh:64%;--hcx:28%;--hcy:46%;"></span>
+          <span class="hero-hotspot" aria-hidden="true" style="--hx:63%;--hy:23%;--hw:21%;--hh:50%;--hcx:74%;--hcy:48%;"></span>
         </div>
       </article>
 
-      <!-- Slide 2: LOJA ONLINE -->
+      <!-- Slide 2: MATCHA -->
       <article class="hero-slide" role="group" aria-roledescription="slide" aria-label="2 de 3">
-        <img class="hero-slide-img" src="assets/images/preparacao1.png" alt="Preparação de café the happiest coffee.">
-        <div class="hero-slide-content">
-          <div class="container">
-            <span class="eyebrow eyebrow-light">Loja Online</span>
-            <h1>Leva a experiência The Happiest Coffee para casa.</h1>
-            <div class="hero-actions">
-              <a href="loja.html" class="btn btn-primary">Comprar Agora</a>
-            </div>
-          </div>
+        <div class="hero-slide-media">
+          <img class="hero-slide-img" src="assets/images/hero/hero-matcha.jpg" alt="Dois copos de matcha the happiest coffee. com pó de matcha">
+          <span class="hero-hotspot" aria-hidden="true" style="--hx:27%;--hy:19%;--hw:23%;--hh:67%;--hcx:39%;--hcy:50%;"></span>
+          <span class="hero-hotspot" aria-hidden="true" style="--hx:47%;--hy:4%;--hw:27%;--hh:82%;--hcx:61%;--hcy:42%;"></span>
+          <span class="hero-hotspot" aria-hidden="true" style="--hx:25%;--hy:73%;--hw:29%;--hh:25%;--hcx:38%;--hcy:85%;"></span>
         </div>
       </article>
 
-      <!-- Slide 3: O NOSSO ESPAÇO -->
+      <!-- Slide 3: RUNNING CLUB -->
       <article class="hero-slide" role="group" aria-roledescription="slide" aria-label="3 de 3">
-        <img class="hero-slide-img" src="assets/images/sala.png" alt="Interior the happiest coffee.">
-        <div class="hero-slide-content">
-          <div class="container">
-            <span class="eyebrow eyebrow-light">O Nosso Espaço</span>
-            <h1>Um espaço para desacelerar e aproveitar o momento.</h1>
-            <div class="hero-actions">
-              <a href="#galeria" class="btn btn-primary">Ver Galeria</a>
-            </div>
-          </div>
+        <div class="hero-slide-media">
+          <img class="hero-slide-img" src="assets/images/hero/hero-running-club.jpg" alt="T-shirt do Running Club e caneca the happiest coffee.">
+          <span class="hero-hotspot" aria-hidden="true" style="--hx:13%;--hy:10%;--hw:63%;--hh:78%;--hcx:44%;--hcy:44%;"></span>
+          <span class="hero-hotspot" aria-hidden="true" style="--hx:60%;--hy:60%;--hw:21%;--hh:32%;--hcx:72%;--hcy:78%;"></span>
         </div>
       </article>
 
     </div>
 
     <button class="hero-arrow hero-arrow--prev" id="heroPrev" type="button" aria-label="Slide anterior">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>
+      <span class="hero-arrow-tri hero-arrow-tri--prev" aria-hidden="true"></span>
     </button>
     <button class="hero-arrow hero-arrow--next" id="heroNext" type="button" aria-label="Slide seguinte">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+      <span class="hero-arrow-tri hero-arrow-tri--next" aria-hidden="true"></span>
     </button>
 
     <div class="hero-dots" id="heroDots" role="tablist" aria-label="Escolher slide">
@@ -106,6 +93,8 @@
       <button class="hero-dot" type="button" role="tab" aria-label="Ir para o slide 2" aria-selected="false"></button>
       <button class="hero-dot" type="button" role="tab" aria-label="Ir para o slide 3" aria-selected="false"></button>
     </div>
+
+    <div class="hero-carousel-fade" aria-hidden="true"></div>
   </section>
 
   <!-- SERVICES -->
