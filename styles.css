@@ -1262,12 +1262,20 @@ img { max-width: 100%; display: block; }
   .reviews-grid { grid-template-columns: 1fr; }
   .gallery-columns { height: 560px; }
   .section-heading--split { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .about-dynamic { grid-template-columns: 1fr; gap: 32px; }
+  .process-steps { grid-template-columns: repeat(2, 1fr); }
+  .community-cta-wrap { flex-direction: column; align-items: flex-start; }
 }
 
 @media (max-width: 560px) {
   .feature-icons { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .photo-slot--about { width: calc(50% - 8px); }
   .showcase-accent { width: 88px; height: 88px; }
+  .about-photos { grid-template-columns: 1fr; }
+  .photo-slot--about-hero { aspect-ratio: 16 / 10; }
+  .process-steps { grid-template-columns: 1fr; }
+  .process-cta { flex-direction: column; }
+  .process-cta .btn { width: 100%; }
 }
 
 @media (max-width: 720px) {
@@ -1318,11 +1326,27 @@ img { max-width: 100%; display: block; }
   padding: 40px 0 88px;
 }
 
+.shop-collection + .shop-collection { margin-top: 64px; }
+
+.shop-collection-head {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  margin-bottom: 28px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.shop-collection-head h2 { font-size: 1.5rem; margin: 0; }
+.shop-collection-head p { margin: 0; }
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 34px;
 }
+
+.product-grid--compact { grid-template-columns: minmax(0, 340px); }
 
 .product-card {
   display: flex;
@@ -1507,50 +1531,112 @@ img { max-width: 100%; display: block; }
 /* Sobre Nós — A Nossa História */
 .about-page { padding: 72px 0 8px; }
 
-.about-prose {
-  max-width: 760px;
-  text-align: center;
+.about-dynamic {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 56px;
+  align-items: center;
 }
 
-.about-prose h1 {
+.about-photos {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 16px;
+}
+
+.about-photos-pair {
+  display: grid;
+  gap: 16px;
+}
+
+.photo-slot--about-hero {
+  aspect-ratio: 3 / 4;
+  border-radius: var(--radius-lg);
+}
+
+.photo-slot--about-sub {
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-lg);
+}
+
+.about-dynamic-text h1 {
   font-size: clamp(2rem, 4vw, 2.9rem);
   margin-bottom: 22px;
 }
 
-.about-prose p {
-  font-size: 1.08rem;
-  line-height: 1.85;
+.about-dynamic-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
   color: var(--text);
   margin: 0;
 }
 
-.about-info { padding-top: 40px; }
+/* Comunidade / Running Club */
+.community { padding: 88px 0 0; }
 
-.about-maps-btn { margin-top: 18px; align-self: flex-start; }
+.community .section-heading--split { margin-bottom: 40px; }
 
-.contact-list {
-  list-style: none;
-  margin: 4px 0 14px;
-  padding: 0;
-  display: grid;
-  gap: 12px;
-}
-
-.contact-list li {
+.community-cta-wrap {
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 48px 0 96px;
+}
+
+.community-text {
+  max-width: 560px;
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 1.02rem;
+}
+
+.community-cta-wrap .btn { flex-shrink: 0; }
+
+/* O Nosso Processo */
+.process { padding: 0 0 100px; background: var(--paper); }
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  margin: 48px 0 56px;
+}
+
+.process-step { position: relative; }
+
+.process-step-index {
+  display: block;
+  font-family: 'Bree Serif', serif;
   font-size: 0.95rem;
+  color: var(--blue-soft);
+  margin-bottom: 10px;
 }
 
-.contact-list svg {
-  width: 20px;
-  height: 20px;
-  color: #6AA1C3;
-  flex-shrink: 0;
+.process-step-icon {
+  width: 30px;
+  height: 30px;
+  color: var(--blue);
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
 }
 
-.contact-list a:hover { color: #6AA1C3; }
+.process-step:hover .process-step-icon { transform: scale(1.12); }
+
+.process-step h3 { font-size: 1.05rem; margin-bottom: 6px; }
+
+.process-step p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.process-cta {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
 
 /* ============================================================
    The Club — premium landing page
