@@ -649,8 +649,29 @@ img { max-width: 100%; display: block; }
 }
 
 .showcase-photos {
+  position: relative;
   display: flex;
   gap: 16px;
+}
+
+.showcase-accent {
+  position: absolute;
+  left: 50%;
+  width: 130px;
+  height: 130px;
+  object-fit: contain;
+  pointer-events: none;
+  filter: drop-shadow(0 8px 16px rgba(43, 38, 32, 0.25));
+}
+
+.showcase-accent--top {
+  top: 0;
+  transform: translate(-50%, -50%);
+}
+
+.showcase-accent--bottom {
+  bottom: 0;
+  transform: translate(-50%, 50%);
 }
 
 .photo-slot--about {
@@ -1205,6 +1226,7 @@ img { max-width: 100%; display: block; }
 @media (max-width: 560px) {
   .feature-icons { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .photo-slot--about { width: calc(50% - 8px); }
+  .showcase-accent { width: 88px; height: 88px; }
 }
 
 @media (max-width: 720px) {
