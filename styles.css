@@ -672,11 +672,18 @@ img { max-width: 100%; display: block; }
 .showcase-accent--bottom {
   bottom: 0;
   transform: translate(-50%, 50%);
+  width: 150px;
+  height: 150px;
 }
 
 .photo-slot--about {
   width: 260px;
   flex: none;
+}
+
+.showcase-bottom .photo-slot--about {
+  width: auto;
+  flex: 1 1 0;
 }
 
 .about-text h2 { font-size: clamp(2rem, 3.2vw, 2.6rem); }
@@ -835,10 +842,22 @@ img { max-width: 100%; display: block; }
 }
 
 .info-card-photos {
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
   margin-top: 16px;
+}
+
+.cafe-accent {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 92px;
+  height: auto;
+  transform: translate(-50%, -32%);
+  pointer-events: none;
+  filter: drop-shadow(0 6px 12px rgba(43, 38, 32, 0.25));
 }
 
 .photo-slot--info {
