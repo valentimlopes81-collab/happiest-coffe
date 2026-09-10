@@ -141,59 +141,81 @@
         <figure class="photo-slot photo-slot--carousel" data-label="assets/images/happiestcoffee8.png"><img class="photo" src="assets/images/happiestcoffee8.png" alt="Ovos Mexidos &amp; Torrada"><figcaption>Ovos Mexidos &amp; Torrada</figcaption></figure>
       </div>
     </div>
-
-    <div class="container">
-      <div class="menu-card">
-        <div class="menu-card-header">
-          <img src="assets/images/logo/logo-color.png" alt="the happiest coffee." class="menu-card-logo">
-          <span class="menu-card-eyebrow">Specialty Coffee</span>
-        </div>
-        <div class="menu-list">
-          <h3>Espresso &amp; Café</h3>
-          <ul>
-            <li><span>Single Espresso</span><span class="dots"></span><span class="price">2,0 €</span></li>
-            <li><span>Double Espresso</span><span class="dots"></span><span class="price">2,2 €</span></li>
-            <li><span>Macchiato</span><span class="dots"></span><span class="price">2,7 €</span></li>
-            <li><span>Americano</span><span class="dots"></span><span class="price">2,8 €</span></li>
-            <li><span>Cortado</span><span class="dots"></span><span class="price">3,0 €</span></li>
-            <li><span>Cappuccino</span><span class="dots"></span><span class="price">3,4 €</span></li>
-            <li><span>Flat White</span><span class="dots"></span><span class="price">3,4 €</span></li>
-            <li><span>Latte</span><span class="dots"></span><span class="price">3,8 €</span></li>
-          </ul>
-          <h3>Frio &amp; Especiais</h3>
-          <ul>
-            <li><span>Iced Coffee</span><span class="dots"></span><span class="price">3,5 €</span></li>
-            <li><span>Iced Latte</span><span class="dots"></span><span class="price">4,0 €</span></li>
-            <li><span>Babyccino</span><span class="dots"></span><span class="price">1,8 €</span></li>
-            <li><span>Espresso Tonic</span><span class="dots"></span><span class="price">4,5 €</span></li>
-            <li><span>V60</span><span class="dots"></span><span class="price">5,0 / 6,5 €</span></li>
-            <li><span>Batch Brew</span><span class="dots"></span><span class="price">2,9 €</span></li>
-            <li><span>Affogato</span><span class="dots"></span><span class="price">4,5 €</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
   </section>
 
-  <!-- SOBRE -->
-  <section id="sobre" class="about">
-    <div class="container about-inner">
-      <div class="photo-slot photo-slot--about" data-label="assets/images/sala.png">
-        <img class="photo" src="assets/images/sala.png" alt="Interior the happiest coffee.">
+  <!-- SOBRE / MENU / HORÁRIO -->
+  <section id="sobre" class="showcase">
+    <div class="container showcase-grid">
+
+      <div class="showcase-col showcase-col--menu">
+        <div class="menu-card">
+          <div class="menu-card-header">
+            <img src="assets/images/logo/logo-color.png" alt="the happiest coffee." class="menu-card-logo">
+            <span class="menu-card-eyebrow">Specialty Coffee</span>
+          </div>
+          <div class="menu-list">
+            <h3>Espresso &amp; Café</h3>
+            <ul>
+              <li><span>Single Espresso</span><span class="dots"></span><span class="price">2,0 €</span></li>
+              <li><span>Double Espresso</span><span class="dots"></span><span class="price">2,2 €</span></li>
+              <li><span>Macchiato</span><span class="dots"></span><span class="price">2,7 €</span></li>
+              <li><span>Americano</span><span class="dots"></span><span class="price">2,8 €</span></li>
+              <li><span>Cortado</span><span class="dots"></span><span class="price">3,0 €</span></li>
+              <li><span>Cappuccino</span><span class="dots"></span><span class="price">3,4 €</span></li>
+              <li><span>Flat White</span><span class="dots"></span><span class="price">3,4 €</span></li>
+              <li><span>Latte</span><span class="dots"></span><span class="price">3,8 €</span></li>
+            </ul>
+            <h3>Frio &amp; Especiais</h3>
+            <ul>
+              <li><span>Iced Coffee</span><span class="dots"></span><span class="price">3,5 €</span></li>
+              <li><span>Iced Latte</span><span class="dots"></span><span class="price">4,0 €</span></li>
+              <li><span>Babyccino</span><span class="dots"></span><span class="price">1,8 €</span></li>
+              <li><span>Espresso Tonic</span><span class="dots"></span><span class="price">4,5 €</span></li>
+              <li><span>V60</span><span class="dots"></span><span class="price">5,0 / 6,5 €</span></li>
+              <li><span>Batch Brew</span><span class="dots"></span><span class="price">2,9 €</span></li>
+              <li><span>Affogato</span><span class="dots"></span><span class="price">4,5 €</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="info-card info-card--hours">
+          <div class="info-card-head">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <h3>Horário <span class="info-card-note">(hora de Lisboa)</span></h3>
+            <span class="open-status" id="openStatus"><span class="open-dot"></span><span id="openStatusText">A verificar…</span></span>
+          </div>
+          <ul class="hours-list" id="hoursList">
+            <li data-day="1"><span>Segunda-feira</span><span>09:00 – 17:00</span></li>
+            <li data-day="2"><span>Terça-feira</span><span>09:00 – 17:00</span></li>
+            <li data-day="3"><span>Quarta-feira</span><span>09:00 – 17:00</span></li>
+            <li data-day="4"><span>Quinta-feira</span><span>09:00 – 17:00</span></li>
+            <li data-day="5"><span>Sexta-feira</span><span>09:00 – 17:00</span></li>
+            <li data-day="6"><span>Sábado</span><span>09:00 – 17:00</span></li>
+            <li data-day="0"><span>Domingo</span><span>09:00 – 17:00</span></li>
+          </ul>
+        </div>
       </div>
-      <div class="about-text">
-        <span class="eyebrow eyebrow-blue">Sobre nós</span>
-        <h2>Um espaço para desacelerar</h2>
-        <p>
-          Na the happiest coffee. acreditamos que uma boa chávena de café pode transformar o dia
-          de alguém. Selecionamos grãos de especialidade e combinamo-los com uma equipa
-          atenta, pronta a receber-te em várias línguas.
-        </p>
-        <p>
-          Ambiente calmo e acolhedor — o lugar certo para um pequeno-almoço com tempo,
-          uma pausa a meio do dia ou aquele café que faz a diferença.
-        </p>
-        <div class="about-stats">
+
+      <div class="showcase-col showcase-col--about">
+        <div class="photo-slot photo-slot--about" data-label="assets/images/sala.png">
+          <img class="photo" src="assets/images/sala.png" alt="Interior the happiest coffee.">
+        </div>
+
+        <div class="about-text">
+          <span class="eyebrow eyebrow-blue">Sobre nós</span>
+          <h2>Um espaço para desacelerar</h2>
+          <p>
+            Na the happiest coffee. acreditamos que uma boa chávena de café pode transformar o dia
+            de alguém. Selecionamos grãos de especialidade e combinamo-los com uma equipa
+            atenta, pronta a receber-te em várias línguas.
+          </p>
+          <p>
+            Ambiente calmo e acolhedor — o lugar certo para um pequeno-almoço com tempo,
+            uma pausa a meio do dia ou aquele café que faz a diferença.
+          </p>
+        </div>
+
+        <div class="about-stats about-stats--center">
           <div class="stat">
             <strong>4,9</strong>
             <span>Avaliação média</span>
@@ -207,61 +229,46 @@
             <span>Por pessoa</span>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- INFO CARDS -->
-  <section id="info" class="info-cards">
-    <div class="container info-grid">
-      <div class="info-card">
-        <div class="info-card-head">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-          <h3>Horário <span class="info-card-note">(hora de Lisboa)</span></h3>
-          <span class="open-status" id="openStatus"><span class="open-dot"></span><span id="openStatusText">A verificar…</span></span>
+        <div class="feature-icons">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+            <span>Wi-Fi</span>
+          </div>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span>Comida disponível</span>
+          </div>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 8h13a3 3 0 0 1 0 6h-1"/><path d="M4 8v7a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4V8"/></svg>
+            <span>Single Origin</span>
+          </div>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 5h16v9H4z"/><path d="M2 18h20l-1.5-3H3.5z"/></svg>
+            <span>Work-friendly</span>
+          </div>
         </div>
-        <ul class="hours-list" id="hoursList">
-          <li data-day="1"><span>Segunda-feira</span><span>09:00 – 17:00</span></li>
-          <li data-day="2"><span>Terça-feira</span><span>09:00 – 17:00</span></li>
-          <li data-day="3"><span>Quarta-feira</span><span>09:00 – 17:00</span></li>
-          <li data-day="4"><span>Quinta-feira</span><span>09:00 – 17:00</span></li>
-          <li data-day="5"><span>Sexta-feira</span><span>09:00 – 17:00</span></li>
-          <li data-day="6"><span>Sábado</span><span>09:00 – 17:00</span></li>
-          <li data-day="0"><span>Domingo</span><span>09:00 – 17:00</span></li>
-        </ul>
+
+        <a href="#visitar" class="btn btn-blue showcase-cta">Onde nos encontrar</a>
+
+        <div class="info-card info-card--cafe">
+          <div class="info-card-head">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 8h13a3 3 0 0 1 0 6h-1"/><path d="M4 8v7a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4V8"/></svg>
+            <h3>Café</h3>
+          </div>
+          <p class="info-card-subtitle">Estilos de preparação</p>
+          <ul class="pill-list">
+            <li>Espresso</li>
+            <li>Batch Brew</li>
+            <li>Pour Over</li>
+          </ul>
+          <div class="info-card-photos">
+            <div class="photo-slot photo-slot--info" data-label="assets/images/preparacao1.png"><img class="photo" src="assets/images/preparacao1.png" alt="Café"></div>
+            <div class="photo-slot photo-slot--info" data-label="assets/images/preparacao2.png"><img class="photo" src="assets/images/preparacao2.png" alt="Café"></div>
+          </div>
+        </div>
       </div>
 
-      <div class="info-card">
-        <div class="info-card-head">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 8h13a3 3 0 0 1 0 6h-1"/><path d="M4 8v7a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4V8"/></svg>
-          <h3>Café</h3>
-        </div>
-        <p class="info-card-subtitle">Estilos de preparação</p>
-        <ul class="pill-list">
-          <li>Espresso</li>
-          <li>Batch Brew</li>
-          <li>Pour Over</li>
-        </ul>
-        <div class="info-card-photos">
-          <div class="photo-slot photo-slot--info" data-label="assets/images/preparacao1.png"><img class="photo" src="assets/images/preparacao1.png" alt="Café"></div>
-          <div class="photo-slot photo-slot--info" data-label="assets/images/preparacao2.png"><img class="photo" src="assets/images/preparacao2.png" alt="Café"></div>
-        </div>
-      </div>
-
-      <div class="info-card">
-        <div class="info-card-head">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/></svg>
-          <h3>Características</h3>
-        </div>
-        <p class="info-card-subtitle">Preço: € €</p>
-        <p class="info-card-subtitle">Espaço: Confortável</p>
-        <ul class="feature-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>Wi-Fi</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>Comida disponível</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>Single Origin</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>Work-friendly</li>
-        </ul>
-      </div>
     </div>
   </section>
 
