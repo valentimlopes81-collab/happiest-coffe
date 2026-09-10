@@ -322,6 +322,51 @@ img { max-width: 100%; display: block; }
   z-index: 1;
 }
 
+/* Minimalist CTA overlaid on each slide — never on the animated photo layer itself */
+.hero-cta {
+  position: absolute;
+  left: 24px;
+  bottom: 26px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 16px;
+  border-radius: 999px;
+  background: rgba(20, 18, 14, 0.38);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: var(--text-light);
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.76rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+}
+
+.hero-cta svg {
+  width: 11px;
+  height: 11px;
+  transition: transform 0.25s ease;
+}
+
+.hero-cta:hover {
+  transform: translateY(-3px);
+  background: rgba(20, 18, 14, 0.55);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.hero-cta:hover svg { transform: translateX(3px); }
+
+.hero-cta:active { transform: translateY(-1px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-cta, .hero-cta svg { transition: none !important; }
+}
+
 /* Arrows: minimalist outline chevrons — a roofline, not a filled triangle */
 .hero-arrow {
   position: absolute;
@@ -1474,6 +1519,7 @@ img { max-width: 100%; display: block; }
   .hero-arrow-tri { width: 11px; height: 11px; border-width: 2.5px; }
   .hero-arrow--prev { left: 6px; }
   .hero-arrow--next { right: 6px; }
+  .hero-cta { left: 14px; bottom: 18px; padding: 7px 13px; font-size: 0.68rem; }
 }
 
 /* THE CLUB — dedicated page spacing */
