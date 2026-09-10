@@ -2117,6 +2117,9 @@ img { max-width: 100%; display: block; }
   flex-wrap: wrap;
 }
 
+/* Diagonal dotted connector between steps — mobile only (hidden here) */
+.process-link { display: none; }
+
 @media (max-width: 960px) {
   .process-steps { grid-template-columns: repeat(2, 1fr); row-gap: 40px; }
   .process-steps::before { display: none; }
@@ -2124,21 +2127,39 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 560px) {
   .process-steps { grid-template-columns: 1fr; }
+  .process-steps::before { display: none; }
 
-  /* Dotted spine linking each step: a vertical dashed line down the badge
-     column. It sits behind the badges (which share the page background),
-     so it only shows in the gaps — reading as a "picotado" between steps. */
-  .process-steps::before {
+  /* Zig-zag: even steps (02, 04) send their icon + title to the right,
+     while the paragraph stays put on the left. */
+  .process-step:nth-child(even) { text-align: right; }
+  .process-step:nth-child(even) .process-step-badge { margin-left: auto; margin-right: 0; }
+  .process-step:nth-child(even) p { text-align: left; }
+
+  /* Keep badges above the connector line so it tucks under them at each end */
+  .process-step-badge { z-index: 1; }
+
+  /* Diagonal dotted connector from this badge's centre to the next one.
+     top:32px = this badge centre; bottom:-72px = row-gap(40) + next badge
+     centre(32) below this step, so it lands on the next badge regardless of
+     text height. Even steps mirror it to run the other diagonal. */
+  .process-link {
     display: block;
+    position: absolute;
     top: 32px;
-    bottom: 124px;
+    bottom: -72px;
     left: 32px;
-    right: auto;
-    width: 0;
-    height: auto;
-    background: none;
-    border-left: 2px dashed var(--border);
+    right: 32px;
+    pointer-events: none;
   }
+  .process-link svg { width: 100%; height: 100%; display: block; overflow: visible; }
+  .process-link line {
+    stroke: var(--border);
+    stroke-width: 2;
+    stroke-dasharray: 2 7;
+    stroke-linecap: round;
+    vector-effect: non-scaling-stroke;
+  }
+  .process-step:nth-child(even) .process-link { transform: scaleX(-1); }
 
   /* Buttons side by side, compact */
   .process-cta { flex-direction: row; flex-wrap: nowrap; gap: 12px; }
