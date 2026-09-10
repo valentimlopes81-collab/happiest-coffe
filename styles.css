@@ -1263,7 +1263,6 @@ img { max-width: 100%; display: block; }
   .gallery-columns { height: 560px; }
   .section-heading--split { flex-direction: column; align-items: flex-start; gap: 6px; }
   .about-dynamic { grid-template-columns: 1fr; gap: 32px; }
-  .process-steps { grid-template-columns: repeat(2, 1fr); }
   .community-cta-wrap { flex-direction: column; align-items: flex-start; }
 }
 
@@ -1273,9 +1272,6 @@ img { max-width: 100%; display: block; }
   .showcase-accent { width: 88px; height: 88px; }
   .about-photos { grid-template-columns: 1fr; }
   .photo-slot--about-hero { aspect-ratio: 16 / 10; }
-  .process-steps { grid-template-columns: 1fr; }
-  .process-cta { flex-direction: column; }
-  .process-cta .btn { width: 100%; }
 }
 
 @media (max-width: 720px) {
@@ -1449,9 +1445,54 @@ img { max-width: 100%; display: block; }
 .plan-desc {
   color: var(--text-muted);
   font-size: 0.95rem;
-  margin: 0 0 24px;
+  margin: 0 0 20px;
+}
+
+.plan-includes {
+  list-style: none;
+  margin: 0 0 28px;
+  padding: 18px 0 0;
+  border-top: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   flex: 1;
 }
+
+.plan-includes li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
+.plan-includes li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.35em;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--blue-soft);
+}
+
+.plan-includes li::after {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0.55em;
+  width: 6px;
+  height: 3px;
+  border-left: 1.5px solid var(--blue-deep);
+  border-bottom: 1.5px solid var(--blue-deep);
+  transform: rotate(-45deg);
+}
+
+.plan-card--featured .plan-includes { border-top-color: rgba(255, 255, 255, 0.3); }
+.plan-card--featured .plan-includes li { color: var(--paper); }
+.plan-card--featured .plan-includes li::before { background: rgba(255, 255, 255, 0.25); }
+.plan-card--featured .plan-includes li::after { border-color: var(--paper); }
 
 .plan-card .btn { width: 100%; }
 
@@ -1594,34 +1635,71 @@ img { max-width: 100%; display: block; }
 .community-cta-wrap .btn { flex-shrink: 0; }
 
 /* O Nosso Processo */
-.process { padding: 0 0 100px; background: var(--paper); }
+.process { padding: 0 0 100px; }
 
 .process-steps {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 32px;
-  margin: 48px 0 56px;
+  margin: 56px 0 56px;
 }
 
-.process-step { position: relative; }
+.process-steps::before {
+  content: "";
+  position: absolute;
+  top: 32px;
+  left: 60px;
+  right: 60px;
+  height: 1px;
+  background: var(--border);
+  z-index: 0;
+}
+
+.process-step { position: relative; z-index: 1; }
+
+.process-step-badge {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--cream);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.process-step:hover .process-step-badge {
+  transform: scale(1.08);
+  border-color: var(--blue);
+}
 
 .process-step-index {
-  display: block;
-  font-family: 'Bree Serif', serif;
-  font-size: 0.95rem;
-  color: var(--blue-soft);
-  margin-bottom: 10px;
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: var(--paper);
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .process-step-icon {
-  width: 30px;
-  height: 30px;
+  width: 26px;
+  height: 26px;
   color: var(--blue);
-  margin-bottom: 16px;
-  transition: transform 0.3s ease;
+  margin: 0;
 }
-
-.process-step:hover .process-step-icon { transform: scale(1.12); }
 
 .process-step h3 { font-size: 1.05rem; margin-bottom: 6px; }
 
@@ -1636,6 +1714,17 @@ img { max-width: 100%; display: block; }
   justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
+}
+
+@media (max-width: 960px) {
+  .process-steps { grid-template-columns: repeat(2, 1fr); row-gap: 40px; }
+  .process-steps::before { display: none; }
+}
+
+@media (max-width: 560px) {
+  .process-steps { grid-template-columns: 1fr; }
+  .process-cta { flex-direction: column; }
+  .process-cta .btn { width: 100%; }
 }
 
 /* ============================================================
@@ -1734,7 +1823,7 @@ img { max-width: 100%; display: block; }
 }
 
 /* Let the pricing section grow to push the footer down */
-.club-main .clube--page { flex: 1; background: var(--paper); }
+.club-main .clube--page { flex: 1; }
 
 @media (max-width: 860px) {
   .benefits-grid { grid-template-columns: 1fr; gap: 30px; }
