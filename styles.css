@@ -1262,7 +1262,6 @@ img { max-width: 100%; display: block; }
   .reviews-grid { grid-template-columns: 1fr; }
   .gallery-columns { height: 560px; }
   .section-heading--split { flex-direction: column; align-items: flex-start; gap: 6px; }
-  .about-dynamic { grid-template-columns: 1fr; gap: 32px; }
   .community-cta-wrap { flex-direction: column; align-items: flex-start; }
 }
 
@@ -1270,8 +1269,6 @@ img { max-width: 100%; display: block; }
   .feature-icons { grid-template-columns: repeat(2, 1fr); gap: 24px; }
   .photo-slot--about { width: calc(50% - 8px); }
   .showcase-accent { width: 88px; height: 88px; }
-  .about-photos { grid-template-columns: 1fr; }
-  .photo-slot--about-hero { aspect-ratio: 16 / 10; }
 }
 
 @media (max-width: 720px) {
@@ -2000,6 +1997,20 @@ img { max-width: 100%; display: block; }
   line-height: 1.8;
   color: var(--text);
   margin: 0;
+}
+
+/* Mobile — these MUST come AFTER the base .about-dynamic / .about-photos
+   rules above. Media queries don't add specificity, so an override placed
+   earlier in the file loses to the unconditional base rule and the grids
+   stay two-column — squashing the photos into a tiny half-width strip. */
+@media (max-width: 960px) {
+  .about-dynamic { grid-template-columns: 1fr; gap: 32px; }
+}
+
+@media (max-width: 560px) {
+  .about-photos { grid-template-columns: 1fr; }
+  .about-photos-pair { grid-template-columns: 1fr 1fr; }
+  .photo-slot--about-hero { aspect-ratio: 16 / 10; }
 }
 
 /* Comunidade / Running Club */
