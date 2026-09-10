@@ -129,3 +129,40 @@ document.querySelectorAll('.hero-popup-close').forEach((btn) => {
     if (popup) popup.classList.add('is-closed');
   });
 });
+
+// Newsletter popup (The Club): show once per session, close on backdrop/×/Esc,
+// confirm on submit. Placeholder — wire the form to a real provider later.
+const newsletterModal = document.getElementById('newsletterModal');
+if (newsletterModal) {
+  const openModal = () => newsletterModal.classList.add('is-open');
+  const closeModal = () => newsletterModal.classList.remove('is-open');
+
+  let seen = false;
+  try { seen = sessionStorage.getItem('nlSeen') === '1'; } catch (e) {}
+  if (!seen) {
+    window.setTimeout(() => {
+      openModal();
+      try { sessionStorage.setItem('nlSeen', '1'); } catch (e) {}
+    }, 2500);
+  }
+
+  newsletterModal.querySelectorAll('[data-close]').forEach((el) => {
+    el.addEventListener('click', closeModal);
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  const form = document.getElementById('newsletterForm');
+  const success = document.getElementById('newsletterSuccess');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const email = document.getElementById('newsletterEmail');
+      if (email && !email.checkValidity()) { email.reportValidity(); return; }
+      // TODO: send `email.value` to the newsletter provider.
+      form.hidden = true;
+      if (success) success.hidden = false;
+    });
+  }
+}

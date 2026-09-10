@@ -1709,7 +1709,7 @@ html {
 
 .locations-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 28px;
 }
 
@@ -1802,3 +1802,105 @@ html {
 @media (max-width: 860px) {
   .locations-grid { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; }
 }
+
+/* ============================================================
+   Newsletter popup (The Club)
+   ============================================================ */
+.newsletter-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.newsletter-modal.is-open { display: flex; }
+
+.newsletter-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(43, 38, 32, 0.55);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+
+.newsletter-dialog {
+  position: relative;
+  z-index: 1;
+  width: min(440px, 100%);
+  background: var(--paper);
+  border-radius: 14px;
+  padding: 34px 32px 26px;
+  box-shadow: 0 30px 70px -20px rgba(43, 38, 32, 0.6);
+  animation: nlpop 0.35s ease;
+}
+
+@keyframes nlpop {
+  from { opacity: 0; transform: translateY(18px) scale(0.97); }
+  to { opacity: 1; transform: none; }
+}
+
+.newsletter-title { font-size: 1.5rem; margin: 8px 0 8px; }
+
+.newsletter-dialog > p {
+  margin: 0 0 18px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+
+.newsletter-form { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.newsletter-form input[type="email"] {
+  flex: 1 1 200px;
+  min-width: 0;
+  padding: 13px 16px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  font: inherit;
+  font-size: 0.92rem;
+  color: var(--text);
+  background: var(--cream);
+}
+
+.newsletter-form input[type="email"]:focus {
+  outline: none;
+  border-color: #6AA1C3;
+  box-shadow: 0 0 0 3px rgba(106, 161, 195, 0.25);
+}
+
+.newsletter-form .btn-primary { background: #6AA1C3; color: var(--paper); }
+.newsletter-form .btn-primary:hover { background: #5b91b3; }
+
+.newsletter-success {
+  margin: 16px 0 0;
+  color: var(--blue-deep);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.newsletter-note {
+  margin: 14px 0 0;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.newsletter-close {
+  position: absolute;
+  top: 12px;
+  right: 14px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--text-muted);
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.newsletter-close:hover { color: var(--text); background: rgba(43, 38, 32, 0.06); }
