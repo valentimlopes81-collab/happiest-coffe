@@ -119,3 +119,13 @@ if (heroCarousel) {
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (!reduce) start();
 }
+
+// Hero promo popups: allow closing the card without following the banner link.
+document.querySelectorAll('.hero-popup-close').forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    const popup = btn.closest('.hero-popup');
+    if (popup) popup.classList.add('is-closed');
+  });
+});
