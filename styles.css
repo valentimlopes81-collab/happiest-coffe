@@ -369,7 +369,7 @@ img { max-width: 100%; display: block; }
   left: auto;
   right: 24px;
   top: auto;
-  bottom: 26px;
+  bottom: 88px;
   transform: none;
 }
 
@@ -1498,7 +1498,7 @@ img { max-width: 100%; display: block; }
   .hero-arrow--next { right: 6px; }
   .hero-cta { padding: 10px 20px; font-size: 0.78rem; gap: 7px; }
   .hero-cta svg { width: 12px; height: 12px; }
-  .hero-cta--corner { right: 14px; bottom: 18px; }
+  .hero-cta--corner { right: 14px; bottom: 54px; }
 }
 
 /* THE CLUB — dedicated page spacing */
