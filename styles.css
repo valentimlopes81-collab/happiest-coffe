@@ -2124,8 +2124,30 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 560px) {
   .process-steps { grid-template-columns: 1fr; }
-  .process-cta { flex-direction: column; }
-  .process-cta .btn { width: 100%; }
+
+  /* Dotted spine linking each step: a vertical dashed line down the badge
+     column. It sits behind the badges (which share the page background),
+     so it only shows in the gaps — reading as a "picotado" between steps. */
+  .process-steps::before {
+    display: block;
+    top: 32px;
+    bottom: 124px;
+    left: 32px;
+    right: auto;
+    width: 0;
+    height: auto;
+    background: none;
+    border-left: 2px dashed var(--border);
+  }
+
+  /* Buttons side by side, compact */
+  .process-cta { flex-direction: row; flex-wrap: nowrap; gap: 12px; }
+  .process-cta .btn {
+    flex: 1;
+    width: auto;
+    padding: 12px 14px;
+    font-size: 0.82rem;
+  }
 }
 
 /* ============================================================
