@@ -143,6 +143,24 @@
   </div>
 </footer>
 
+<!-- Newsletter popup -->
+<div class="newsletter-modal" id="newsletterModal">
+  <div class="newsletter-backdrop" data-close></div>
+  <div class="newsletter-dialog" role="dialog" aria-modal="true" aria-labelledby="nlTitle">
+    <button type="button" class="newsletter-close" data-close aria-label="Fechar">&times;</button>
+    <span class="hero-popup-eyebrow">Newsletter</span>
+    <h3 id="nlTitle" class="newsletter-title">Entra no THE CLUB</h3>
+    <p>Recebe lançamentos, lotes exclusivos e vantagens de membro diretamente no teu email.</p>
+    <!-- Placeholder: ligar a um serviço de newsletter (ex: Mailchimp / Shopify Email) -->
+    <form class="newsletter-form" id="newsletterForm" novalidate>
+      <input type="email" id="newsletterEmail" name="email" required placeholder="O teu email" aria-label="O teu email">
+      <button type="submit" class="btn btn-primary">Subscrever</button>
+    </form>
+    <p class="newsletter-success" id="newsletterSuccess" hidden>Obrigado! Vais receber as novidades no teu email. ☕</p>
+    <p class="newsletter-note">Sem spam. Podes cancelar quando quiseres.</p>
+  </div>
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>
