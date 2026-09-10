@@ -47,58 +47,40 @@
 <main id="top">
 
   <!-- HERO CARROSSEL -->
-  <section class="hero-carousel" id="heroCarousel" aria-roledescription="carrossel" aria-label="Áreas de negócio">
+  <section class="hero-carousel" id="heroCarousel" aria-roledescription="carrossel" aria-label="Produtos the happiest coffee.">
     <div class="hero-slides">
 
-      <!-- Slide 1: THE CLUB -->
+      <!-- Slide 1: SACO + CAFÉ -->
       <article class="hero-slide is-active" role="group" aria-roledescription="slide" aria-label="1 de 3">
-        <img class="hero-slide-img" src="assets/images/happiestcoffee1.jpg" alt="Café de especialidade the happiest coffee.">
-        <div class="hero-slide-content">
-          <div class="container">
-            <span class="eyebrow eyebrow-light">THE CLUB</span>
-            <h1>O teu café de especialidade, todos os meses.</h1>
-            <div class="hero-actions">
-              <a href="loja.html#clube" class="btn btn-primary">Aderir ao Clube</a>
-            </div>
-          </div>
+        <div class="hero-slide-media">
+          <img class="hero-slide-img" src="assets/images/hero/hero-bag-cafe.jpg" alt="Saco de café the happiest coffee. com dois copos de café de especialidade">
+          <img class="hero-object" aria-hidden="true" style="left:12.5%;top:4.492%;width:72.965%;height:88.997%;" src="assets/images/hero/cutouts/hero-bag-cafe-group.webp" alt="">
         </div>
       </article>
 
-      <!-- Slide 2: LOJA ONLINE -->
+      <!-- Slide 2: MATCHA -->
       <article class="hero-slide" role="group" aria-roledescription="slide" aria-label="2 de 3">
-        <img class="hero-slide-img" src="assets/images/preparacao1.png" alt="Preparação de café the happiest coffee.">
-        <div class="hero-slide-content">
-          <div class="container">
-            <span class="eyebrow eyebrow-light">Loja Online</span>
-            <h1>Leva a experiência The Happiest Coffee para casa.</h1>
-            <div class="hero-actions">
-              <a href="loja.html" class="btn btn-primary">Comprar Agora</a>
-            </div>
-          </div>
+        <div class="hero-slide-media">
+          <img class="hero-slide-img" src="assets/images/hero/hero-matcha.jpg" alt="Dois copos de matcha the happiest coffee. com pó de matcha">
+          <img class="hero-object" aria-hidden="true" style="left:26.49%;top:1.497%;width:56.977%;height:84.961%;" src="assets/images/hero/cutouts/hero-matcha-group.webp" alt="">
         </div>
       </article>
 
-      <!-- Slide 3: O NOSSO ESPAÇO -->
+      <!-- Slide 3: RUNNING CLUB -->
       <article class="hero-slide" role="group" aria-roledescription="slide" aria-label="3 de 3">
-        <img class="hero-slide-img" src="assets/images/sala.png" alt="Interior the happiest coffee.">
-        <div class="hero-slide-content">
-          <div class="container">
-            <span class="eyebrow eyebrow-light">O Nosso Espaço</span>
-            <h1>Um espaço para desacelerar e aproveitar o momento.</h1>
-            <div class="hero-actions">
-              <a href="#galeria" class="btn btn-primary">Ver Galeria</a>
-            </div>
-          </div>
+        <div class="hero-slide-media">
+          <img class="hero-slide-img" src="assets/images/hero/hero-running-club.jpg" alt="T-shirt do Running Club e caneca the happiest coffee.">
+          <img class="hero-object" aria-hidden="true" style="left:59.484%;top:59.44%;width:21.003%;height:34.049%;" src="assets/images/hero/cutouts/hero-running-club-mug.webp" alt="">
         </div>
       </article>
 
     </div>
 
     <button class="hero-arrow hero-arrow--prev" id="heroPrev" type="button" aria-label="Slide anterior">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 6l-6 6 6 6"/></svg>
+      <span class="hero-arrow-tri hero-arrow-tri--prev" aria-hidden="true"></span>
     </button>
     <button class="hero-arrow hero-arrow--next" id="heroNext" type="button" aria-label="Slide seguinte">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+      <span class="hero-arrow-tri hero-arrow-tri--next" aria-hidden="true"></span>
     </button>
 
     <div class="hero-dots" id="heroDots" role="tablist" aria-label="Escolher slide">
@@ -106,6 +88,8 @@
       <button class="hero-dot" type="button" role="tab" aria-label="Ir para o slide 2" aria-selected="false"></button>
       <button class="hero-dot" type="button" role="tab" aria-label="Ir para o slide 3" aria-selected="false"></button>
     </div>
+
+    <div class="hero-carousel-fade" aria-hidden="true"></div>
   </section>
 
   <!-- SERVICES -->
@@ -157,8 +141,12 @@
         <figure class="photo-slot photo-slot--carousel" data-label="assets/images/happiestcoffee8.png"><img class="photo" src="assets/images/happiestcoffee8.png" alt="Ovos Mexidos &amp; Torrada"><figcaption>Ovos Mexidos &amp; Torrada</figcaption></figure>
       </div>
     </div>
+  </section>
 
-    <div class="container">
+  <!-- SOBRE / MENU / HORÁRIO -->
+  <section id="sobre" class="showcase">
+    <div class="container showcase-grid">
+
       <div class="menu-card">
         <div class="menu-card-header">
           <img src="assets/images/logo/logo-color.png" alt="the happiest coffee." class="menu-card-logo">
@@ -188,28 +176,33 @@
           </ul>
         </div>
       </div>
-    </div>
-  </section>
 
-  <!-- SOBRE -->
-  <section id="sobre" class="about">
-    <div class="container about-inner">
-      <div class="photo-slot photo-slot--about" data-label="assets/images/sala.png">
-        <img class="photo" src="assets/images/sala.png" alt="Interior the happiest coffee.">
-      </div>
-      <div class="about-text">
-        <span class="eyebrow eyebrow-blue">Sobre nós</span>
-        <h2>Um espaço para desacelerar</h2>
-        <p>
-          Na the happiest coffee. acreditamos que uma boa chávena de café pode transformar o dia
-          de alguém. Selecionamos grãos de especialidade e combinamo-los com uma equipa
-          atenta, pronta a receber-te em várias línguas.
-        </p>
-        <p>
-          Ambiente calmo e acolhedor — o lugar certo para um pequeno-almoço com tempo,
-          uma pausa a meio do dia ou aquele café que faz a diferença.
-        </p>
-        <div class="about-stats">
+      <div class="showcase-top">
+        <div class="showcase-photos">
+          <div class="photo-slot photo-slot--about" data-label="assets/images/sala.png">
+            <img class="photo" src="assets/images/sala.png" alt="Interior the happiest coffee.">
+          </div>
+          <div class="photo-slot photo-slot--about" data-label="assets/images/galeria4.png">
+            <img class="photo" src="assets/images/galeria4.png" alt="Fila de clientes na tenda the happiest coffee.">
+          </div>
+          <img class="showcase-accent showcase-accent--top" src="assets/images/accents/matcha-accent.webp" alt="" aria-hidden="true">
+        </div>
+
+        <div class="about-text">
+          <span class="eyebrow eyebrow-blue">Sobre nós</span>
+          <h2>Um espaço para desacelerar</h2>
+          <p>
+            Na the happiest coffee. acreditamos que uma boa chávena de café pode transformar o dia
+            de alguém. Selecionamos grãos de especialidade e combinamo-los com uma equipa
+            atenta, pronta a receber-te em várias línguas.
+          </p>
+          <p>
+            Ambiente calmo e acolhedor — o lugar certo para um pequeno-almoço com tempo,
+            uma pausa a meio do dia ou aquele café que faz a diferença.
+          </p>
+        </div>
+
+        <div class="about-stats about-stats--center">
           <div class="stat">
             <strong>4,9</strong>
             <span>Avaliação média</span>
@@ -223,14 +216,46 @@
             <span>Por pessoa</span>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- INFO CARDS -->
-  <section id="info" class="info-cards">
-    <div class="container info-grid">
-      <div class="info-card">
+        <div class="info-card info-card--cafe">
+          <div class="info-card-head">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 8h13a3 3 0 0 1 0 6h-1"/><path d="M4 8v7a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4V8"/></svg>
+            <h3>Café</h3>
+          </div>
+          <p class="info-card-subtitle">Estilos de preparação</p>
+          <ul class="pill-list">
+            <li>Espresso</li>
+            <li>Batch Brew</li>
+            <li>Pour Over</li>
+          </ul>
+          <div class="info-card-photos">
+            <div class="photo-slot photo-slot--info" data-label="assets/images/preparacao1.png"><img class="photo" src="assets/images/preparacao1.png" alt="Café"></div>
+            <div class="photo-slot photo-slot--info" data-label="assets/images/preparacao2.png"><img class="photo" src="assets/images/preparacao2.png" alt="Café"></div>
+            <img class="cafe-accent" src="assets/images/accents/coffee-spill-accent.webp" alt="" aria-hidden="true">
+          </div>
+        </div>
+
+        <div class="feature-icons">
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M1.42 9a16 16 0 0 1 21.16 0"/><path d="M5 12.55a11 11 0 0 1 14.08 0"/><path d="M8.53 16.11a6 6 0 0 1 6.95 0"/><line x1="12" y1="20" x2="12.01" y2="20"/></svg>
+            <span>Wi-Fi</span>
+          </div>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            <span>Comida disponível</span>
+          </div>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 8h13a3 3 0 0 1 0 6h-1"/><path d="M4 8v7a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4V8"/></svg>
+            <span>Single Origin</span>
+          </div>
+          <div class="feature-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 5h16v9H4z"/><path d="M2 18h20l-1.5-3H3.5z"/></svg>
+            <span>Work-friendly</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="info-card info-card--hours">
         <div class="info-card-head">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
           <h3>Horário <span class="info-card-note">(hora de Lisboa)</span></h3>
@@ -247,37 +272,20 @@
         </ul>
       </div>
 
-      <div class="info-card">
-        <div class="info-card-head">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 8h13a3 3 0 0 1 0 6h-1"/><path d="M4 8v7a4 4 0 0 0 4 4h4a4 4 0 0 0 4-4V8"/></svg>
-          <h3>Café</h3>
-        </div>
-        <p class="info-card-subtitle">Estilos de preparação</p>
-        <ul class="pill-list">
-          <li>Espresso</li>
-          <li>Batch Brew</li>
-          <li>Pour Over</li>
-        </ul>
-        <div class="info-card-photos">
-          <div class="photo-slot photo-slot--info" data-label="assets/images/preparacao1.png"><img class="photo" src="assets/images/preparacao1.png" alt="Café"></div>
-          <div class="photo-slot photo-slot--info" data-label="assets/images/preparacao2.png"><img class="photo" src="assets/images/preparacao2.png" alt="Café"></div>
+      <div class="showcase-bottom">
+        <a href="#visitar" class="btn btn-blue showcase-cta">Onde nos encontrar</a>
+
+        <div class="showcase-photos">
+          <div class="photo-slot photo-slot--about" data-label="assets/images/galeria2.png">
+            <img class="photo" src="assets/images/galeria2.png" alt="Bolacha e café ao pequeno-almoço">
+          </div>
+          <div class="photo-slot photo-slot--about" data-label="assets/images/galeria9.png">
+            <img class="photo" src="assets/images/galeria9.png" alt="Muffin e café the happiest coffee.">
+          </div>
+          <img class="showcase-accent showcase-accent--bottom" src="assets/images/accents/cookie-accent.webp" alt="" aria-hidden="true">
         </div>
       </div>
 
-      <div class="info-card">
-        <div class="info-card-head">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6l7-3Z"/></svg>
-          <h3>Características</h3>
-        </div>
-        <p class="info-card-subtitle">Preço: € €</p>
-        <p class="info-card-subtitle">Espaço: Confortável</p>
-        <ul class="feature-list">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>Wi-Fi</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>Comida disponível</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>Single Origin</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg>Work-friendly</li>
-        </ul>
-      </div>
     </div>
   </section>
 
