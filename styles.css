@@ -648,9 +648,14 @@ img { max-width: 100%; display: block; }
   border-radius: var(--radius-md);
 }
 
+.showcase-photos {
+  display: flex;
+  gap: 16px;
+}
+
 .photo-slot--about {
-  align-self: flex-start;
-  max-width: 260px;
+  width: 260px;
+  flex: none;
 }
 
 .about-text h2 { font-size: clamp(2rem, 3.2vw, 2.6rem); }
@@ -1199,6 +1204,7 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 560px) {
   .feature-icons { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .photo-slot--about { width: calc(50% - 8px); }
 }
 
 @media (max-width: 720px) {
