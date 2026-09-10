@@ -1940,6 +1940,13 @@ img { max-width: 100%; display: block; }
 
 /* Hero carousel — mobile */
 @media (max-width: 640px) {
+  /* Taller, portrait-friendly hero so the products fill the screen and
+     grab attention. The cut-out layer sits pixel-for-pixel on top of the
+     photo and only reacts to hover (disabled on touch), so hiding it here
+     changes nothing visually while freeing the frame to crop as a portrait. */
+  .hero-slides { aspect-ratio: 4 / 5; }
+  .hero-object { display: none; }
+
   .hero-arrow { width: 34px; height: 52px; }
   .hero-arrow-tri { width: 11px; height: 11px; border-width: 2.5px; }
   .hero-arrow--prev { left: 6px; }
